@@ -14,6 +14,10 @@ class DashboardController
 		log.debug"params for contactus action : "+params
 	}
 	
+	def productList(){
+		log.debug"params for productList action : "+params
+	}
+	
 	def product(){
 		log.debug"params for product action : "+params
 	}

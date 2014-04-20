@@ -1,100 +1,6 @@
 <!DOCTYPE html>
 
-<script type="text/javascript">
-    $(document).ready(function() {
-        // Setup HoverAccordion for Example 1
-        $('#supermenu').hoverAccordion();
-    });
-</script>
-<style media="screen" type="text/css">
-    /* Styles for Example #1 */
-    #headerdiv{
-        height: 200px;
-    }
-    #supermenu {
-        margin: 0;
-        padding: 0;
-        width: 200px;
-        list-style-type: none;
-        line-height: 120%;
-    }
 
-    #supermenu .closed {
-        background-image: url(images/ha-down.gif);
-    }
-
-    #supermenu .closed, #supermenu .opened {
-        padding-right: 10px;
-        background-position: 98% 50%;
-        background-repeat: no-repeat;
-    }
-
-    #supermenu .header {
-        background-color: #7B7B7B;
-    }
-
-    #supermenu .opened {
-        background-image: url(images/ha-up.gif);
-    }
-
-    #supermenu a {
-        display: block;
-        font-weight: bold;
-        text-decoration: none;
-    }
-
-    #supermenu a.hover {
-        border-top: 1px solid #5F5F5F;
-        border-bottom: 1px solid #7B7B7B;
-        background-color: #7B7B7B;
-        color: #FFFFFF;
-    }
-
-    #supermenu ul {
-
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-    }
-
-    #supermenu li {
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
-        background-color: #848484;
-        color: #FFFFFF;
-    }
-
-    #supermenu li a {
-        padding: 2px 10px 2px 4px;
-        border-top: 1px solid #9A9A9A;
-        border-left: 1px solid #9A9A9A;
-        border-right: 1px solid #696969;
-        border-bottom: 1px solid #757575;
-        background-color: #848484;
-        color: #FFFFFF;
-    }
-
-    #supermenu li.active a, #supermenu li li.active a {
-        border-top: 1px solid #5F5F5F;
-        border-bottom: 1px solid #7B7B7B;
-        border-left: 1px solid #757575;
-        border-right: 1px solid #9A9A9A;
-        background-color: #404040;
-        color: #FFFFFF;
-    }
-
-    #supermenu li.active li a, #supermenu li li a {
-        padding: 2px 4px 2px 8px;
-        border-top: 1px solid #696969;
-        border-left: 1px solid #696969;
-        border-right: 1px solid #8A8A8A;
-        border-bottom: 1px solid #7B7B7B;
-        background-color: #757575;
-        color: #FFFFFF;
-    }
-
-</style>
 <html>
     <head>
         <title>Product</title>
@@ -239,6 +145,104 @@
         </div>
         </noscript>
 
-    </body>
+    
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        // Setup HoverAccordion for Example 1
+        $('#supermenu').hoverAccordion();
+    });
+</script>
+<style media="screen" type="text/css">
+    /* Styles for Example #1 */
+    #headerdiv{
+        height: 200px;
+    }
+    #supermenu {
+        margin: 0;
+        padding: 0;
+        width: 200px;
+        list-style-type: none;
+        line-height: 120%;
+    }
+
+    #supermenu .closed {
+        background-image: url(${resource(dir: 'images/dashboard/', file: 'ha-down.gif')});
+    }
+
+    #supermenu .closed, #supermenu .opened {
+        padding-right: 10px;
+        background-position: 98% 50%;
+        background-repeat: no-repeat;
+    }
+
+    #supermenu .header {
+        background-color: #7B7B7B;
+    }
+
+    #supermenu .opened {
+        background-image: url(${resource(dir: 'images/dashboard/', file: 'ha-up.gif')});
+    }
+
+    #supermenu a {
+        display: block;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    #supermenu a.hover {
+        border-top: 1px solid #5F5F5F;
+        border-bottom: 1px solid #7B7B7B;
+        background-color: #7B7B7B;
+        color: #FFFFFF;
+    }
+
+    #supermenu ul {
+
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    #supermenu li {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        background-color: #848484;
+        color: #FFFFFF;
+    }
+
+    #supermenu li a {
+        padding: 2px 10px 2px 4px;
+        border-top: 1px solid #9A9A9A;
+        border-left: 1px solid #9A9A9A;
+        border-right: 1px solid #696969;
+        border-bottom: 1px solid #757575;
+        background-color: #848484;
+        color: #FFFFFF;
+    }
+
+    #supermenu li.active a, #supermenu li li.active a {
+        border-top: 1px solid #5F5F5F;
+        border-bottom: 1px solid #7B7B7B;
+        border-left: 1px solid #757575;
+        border-right: 1px solid #9A9A9A;
+        background-color: #404040;
+        color: #FFFFFF;
+    }
+
+    #supermenu li.active li a, #supermenu li li a {
+        padding: 2px 4px 2px 8px;
+        border-top: 1px solid #696969;
+        border-left: 1px solid #696969;
+        border-right: 1px solid #8A8A8A;
+        border-bottom: 1px solid #7B7B7B;
+        background-color: #757575;
+        color: #FFFFFF;
+    }
+
+</style>
+
+</body>
 
 </html>
