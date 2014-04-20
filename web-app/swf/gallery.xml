@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ncesoft>
+  <galleries>
+    <gallery>
+      <id>1</id>
+      <name>gallary</name>
+      <description>gallary</description>
+      <thumb>gallary/gallery_thumb.png</thumb>
+      <templateXML>gallary/template.xml</templateXML>
+      <itemXML>gallary/items.xml</itemXML>
+      <background>
+        <fileName></fileName>
+        <color>0</color>
+        <fillType>fillMax</fillType>
+        <transparency>100</transparency>
+      </background>
+      <musics/>
+    </gallery>
+  </galleries>
+  <musics/>
+  <background>
+    <fileName></fileName>
+    <color>0</color>
+    <fillType>fillMax</fillType>
+    <transparency>100</transparency>
+  </background>
+  <logo>
+    <fileName></fileName>
+    <position>bottom-left</position>
+    <URL>http://</URL>
+    <target>Current Window</target>
+  </logo>
+  <setting>
+    <swfWd>800</swfWd>
+    <swfHt>600</swfHt>
+    <playType>manual</playType>
+    <loopType>1</loopType>
+    <openInFullScreen>False</openInFullScreen>
+    <useSWFMusic>True</useSWFMusic>
+    <loopSWFMusic>True</loopSWFMusic>
+    <useGalleryMusic>False</useGalleryMusic>
+    <loopGalleryMusic>True</loopGalleryMusic>
+    <thumbnailWidth>160</thumbnailWidth>
+    <allowKeyboard>True</allowKeyboard>
+    <stopMusicWhenVideo>True</stopMusicWhenVideo>
+    <buttons>
+      <gallery>True</gallery>
+      <play>True</play>
+      <nextItem>True</nextItem>
+      <nextPage>True</nextPage>
+      <fullscreen>True</fullscreen>
+      <volume>True</volume>
+      <nextItem_big>True</nextItem_big>
+      <showToolTip>True</showToolTip>
+    </buttons>
+  </setting>
+</ncesoft>
