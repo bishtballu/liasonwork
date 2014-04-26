@@ -1,12 +1,9 @@
 <!DOCTYPE html>
-
-
 <html>
     <head>
-        <title>Product</title>
+        <title>Product Detail</title>
 
-        
-<meta name="layout" content="dashboardlayout" />
+       <meta name="layout" content="dashboardlayout" /> 
     </head>
     <body id="login" style="overflow-x: hidden;">
 
@@ -14,7 +11,7 @@
 
             <!-- Header -->
             <div id="main-body" class="box css" style="width: 100%;height: 134px;">
-                <table width=100%" id="headertable">
+                <table width="100%" id="headertable">
                     <tr style="float:left"><td><div id="logo"><img src="${resource(dir: 'images/dashboard/', file: 'logo.png')}" alt="some_text"  height="90px"></div></td></tr>
                     <tr><td>
                             <nav id="mainnav">
@@ -42,7 +39,7 @@
                         <div class="step first-step alignCenter">
                             <table class="tablecontact">
                                 <tr>
-                                    <td  id="contactheader" >
+                                    <td colspan="5" id="contactheader" >
                                         Product List
 
                                     </td>
@@ -106,7 +103,9 @@
 
 
 
-                                    </td> 
+                                    </td>
+                                    <td style="width: 10px;"></td>
+                                    <g:render template="productdetail"></g:render>
                                 </tr>
 
 
@@ -144,9 +143,6 @@
             </div>
         </div>
         </noscript>
-
-    
-
 <script type="text/javascript">
     $(document).ready(function() {
         // Setup HoverAccordion for Example 1
@@ -240,9 +236,12 @@
         background-color: #757575;
         color: #FFFFFF;
     }
+    .productTD{
+        border: 1px solid black;
+    }
 
 </style>
-
-</body>
+        
+    </body>
 
 </html>

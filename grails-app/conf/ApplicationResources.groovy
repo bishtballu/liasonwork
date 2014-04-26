@@ -11,6 +11,5 @@ modules = {
 		
 		resource url:'js/dashboard/jquery.hoveraccordion.js', disposition:'head'
 		resource url:'js/dashboard/jquery.hoveraccordion.min.js', disposition:'head'
-		resource url:'//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.map', disposition:'head'
 	}
 }
