@@ -2,12 +2,15 @@ package com.liason.auth
 
 import grails.transaction.Transactional
 
+import com.liason.product.ProductCategory
+
 
 @Transactional
 class InitAdminService
 {
 	void createAdmin()
 	{
+		createAllProductCategories()
 		if(Role.list().size()==0)
 		{
 			String adminUsername='superadmin'
@@ -21,5 +24,22 @@ class InitAdminService
 			else
 				user.errors.each {log.debug "error occured while saving user:"+it}
 		}
+	}
+	
+	void createAllProductCategories()
+	{
+		if(ProductCategory.list().size() == 0)
+		{
+			productCategory("Lathe Machine")
+			productCategory("Heavy Machine")
+			productCategory("Light Machine")
+		}
+	}
+	
+	void productCategory(String productName)
+	{
+		ProductCategory category=new ProductCategory(name:productName)
+		if( !category.save() )
+			category.errors.each{ log.debug"error occured while saving productCategory : "+it }
 	}
 }

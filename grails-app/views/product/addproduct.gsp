@@ -217,38 +217,50 @@
                 
                 $('#dynamictable').append('<table border=\"1\"></table><br>');
                 
-                
                 var table  = $('#dynamictable').children();    
                 for(var i = 0; i< row;i++)
                 {
-                    
                     if(i==0){
                         var p = "<tr >";
-                        for(var k=0;k<col;k++)
-                            {
+                        for(var k=0;k<col;k++){
                                 p = p+"<td >"+"<input name=\"R"+i+"C"+k+"\" id=\"R"+i+"C"+k+"\" style=\"color:red; background-color:yellow;\" type=\"text\"/></td>";
-                            }
+                        }
                         p = p+"</tr>";
                         table.append(p);
                     }
-                    var result = "<tr>";
-                    for(var j = 0; j< col;j++)
+                    if(i<row-1)
                     {
-                        result = result + "<td >"+"<input name=\"R"+(i+1)+"C"+j+"\" id=\"R"+(i+1)+"C"+j+"\" type=\"text\"/>"+"</td>";
+	                    var result = "<tr>";
+	                    for(var j = 0; j< col;j++){
+	                        result = result + "<td >"+"<input name=\"R"+(i+1)+"C"+j+"\" id=\"R"+(i+1)+"C"+j+"\" type=\"text\"/>"+"</td>";
+	                    }
+	                    result = result + "</tr>"; 
+	                    table.append(result);
+	                    document.getElementById("creattablebutton").disabled = true;
+	                    global++;
                     }
-                    result = result + "</tr>"; 
-                    table.append(result);
-                    document.getElementById("creattablebutton").disabled = true;
-                    global++; 
                 }
             }
 
             function addProduct()
             {
-                $("#addProductForm").submit();
+                var validateFormMessage=validateProductForm();
+                if(validateFormMessage=="")
+                	$("#addProductForm").submit();
+                else if(validateFormMessage=="productName")
+                    alert("please enter name of the product");
+                else alert("Please provide some product description");
+            }
+
+            function validateProductForm()
+            {
+                if($("#productName").val()=="")	return "productName";
+                else if($("#productDesc").val()=="") return "productDesc";
+                else return "";
             }
             
         </script>
+        
 <style media="screen" type="text/css">
     /* Styles for Example #1 */
     #headerdiv{
