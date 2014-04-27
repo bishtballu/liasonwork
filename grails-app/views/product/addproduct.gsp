@@ -30,12 +30,21 @@
                         </td></tr>
                 </table>
             </div>
+            	<div id="logoutLink">
+	            	<sec:ifLoggedIn>
+						Logged in as <sec:username/> (<g:link controller='logout'>Logout</g:link>)
+					</sec:ifLoggedIn>
+				</div>
             <div style="height: 10px;">
 
             </div>
             <!-- LOGIN BOX -->
+            
+            
+			
             <div id="main-body" class="css" ><div class="inner">
                     <div class="step first-step alignCenter">
+                    	<g:form name="addProductForm" url="[action:'saveNewProduct',controller:'product']">
                         <table class="tablecontact">
                             <tr>
                                 <td colspan="3" id="contactheader" >
@@ -53,8 +62,7 @@
                                     
                                 </td>
                                 <td  class="tablecol">
-                                    <input style="width: 250px;" type="text" name="firstname">
-                                    
+                                    <input style="width: 250px;" type="text" name="productName" id="productName">                                    
                                 </td>
                                 
                             </tr>
@@ -69,13 +77,7 @@
                                     
                                 </td>
                                 <td  class="tablecol">
-                                    <select>
-                                        <option value="">Product1</option>
-                                        <option value="">Product1</option>
-                                        <option value="">Product1</option>
-                                        <option value="">Product1</option>
-                                    </select>
-                                    
+                                    <g:select id="categoryName" optionKey="id" optionValue="name" name="categoryName" from="${categoryList}" />
                                 </td>
                                 
                             </tr>
@@ -86,19 +88,14 @@
                                 <td class="firsttablecol"></td>
                                 <td class="tablecol">
                                    Image For Product:
-                                    
                                 </td>
                                 <td  class="tablecol">
-                                    <input id="fileupload" type="file" name="file" />
-                                    
+                                    <input id="fileupload" type="file" name="productImage" id="productImage" />
                                 </td>
-                                
                             </tr>
                             <tr>
                                 <td colspan="3" style="height: 15px;"></td>
                             </tr>
-                            
-                            
                             <tr>
                                 <td class="firsttablecol"></td>
                                 <td class="tablecol">
@@ -106,10 +103,7 @@
                                     
                                 </td>
                                 <td  class="tablecol">
-                                    <textarea rows="4" cols="45" placeholder="Product description">
-                                        
-                                    </textarea>
-                                    
+                                    <textarea id="productDesc" name="productDesc" rows="4" cols="45" placeholder="Product description"></textarea>
                                 </td>
                                 
                             </tr>
@@ -120,7 +114,6 @@
                                 <td class="firsttablecol"></td>
                                 <td class="tablecol">
                                     Enter Table Detail :
-                                    
                                 </td>
                                 <td  class="tablecol">
                             <lable>Rows : </lable><input onblur="valiationFun();" id="rowtable" style="width: 25px;" type="text" name="row">&nbsp;&nbsp;&nbsp;
@@ -149,7 +142,7 @@
                                     
                                 </td>
                                 <td  class="tablecol">
-                                    <button type="button" onclick="addProduct();">Add Product</button>                                    
+                                    <button type="button" onclick="addProduct();">Add Product</button>
                                 </td>
                                
                             </tr>
@@ -157,6 +150,7 @@
                                 <td colspan="3" style="height: 15px;"></td>
                             </tr>
                         </table>
+                        </g:form>
                     </div>
 
 
@@ -196,7 +190,8 @@
 
 <script>
            var global = 0;
-            function valiationFun(){
+            function valiationFun()
+            {
                 if (isNaN($('#rowtable').val()) || isNaN($('#coltable').val())){
                     document.getElementById("validation").innerHTML = "&nbsp;&nbsp;invalid";
                     document.getElementById("creattablebutton").disabled = true;
@@ -209,7 +204,8 @@
                 return;
             }
             
-            function createTable(){
+            function createTable()
+            {
                 if(global>0){
                    return; 
                 }
@@ -228,24 +224,17 @@
                     
                     if(i==0){
                         var p = "<tr >";
-                        //var q = "<tr><td colspan=\""+col+"\" >"+"<input style=\"color:red;width:99%;text-align:center; \" type=\"text\"/></td></tr>"
-                        
-                       // table.append(q);
                         for(var k=0;k<col;k++)
                             {
-                                p = p+"<td >"+"<input style=\"color:red; background-color:yellow;\" type=\"text\"/></td>";
+                                p = p+"<td >"+"<input name=\"R"+i+"C"+k+"\" id=\"R"+i+"C"+k+"\" style=\"color:red; background-color:yellow;\" type=\"text\"/></td>";
                             }
-                            
-                            
-                        
                         p = p+"</tr>";
                         table.append(p);
                     }
                     var result = "<tr>";
                     for(var j = 0; j< col;j++)
                     {
-                        
-                        result = result + "<td>"+"<input type=\"text\"/>"+"</td>";
+                        result = result + "<td >"+"<input name=\"R"+(i+1)+"C"+j+"\" id=\"R"+(i+1)+"C"+j+"\" type=\"text\"/>"+"</td>";
                     }
                     result = result + "</tr>"; 
                     table.append(result);
@@ -253,7 +242,12 @@
                     global++; 
                 }
             }
-        
+
+            function addProduct()
+            {
+                $("#addProductForm").submit();
+            }
+            
         </script>
 <style media="screen" type="text/css">
     /* Styles for Example #1 */

@@ -86,11 +86,11 @@ grails.hibernate.cache.queries = false
 environments {
     development {
         grails.logging.jul.usebridge = true
-		grails.serverURL = "http://localhost:8080/ARI"
+		grails.serverURL = "http://localhost:8080/liasonwork"
     }
     production {
         grails.logging.jul.usebridge = false
-		grails.serverURL = "http://localhost:8080/ARI"
+		grails.serverURL = "http://localhost:8080/liasonwork"
     }
 }
 
@@ -120,6 +120,7 @@ log4j = {
 		   'grails.app.tests'
 }
 
+grails.plugin.springsecurity.logout.postOnly = false
 
 // Added by the Spring Security Core plugin:
 grails.plugin.springsecurity.userLookup.userDomainClassName = 'com.liason.auth.User'

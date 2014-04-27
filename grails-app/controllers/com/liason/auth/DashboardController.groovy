@@ -18,10 +18,6 @@ class DashboardController
 		log.debug"params for product action : "+params
 	}
 	
-	def addproduct(){
-		
-	}
-	
 	def register(){
 		log.debug"params for register action : "+params
 	}

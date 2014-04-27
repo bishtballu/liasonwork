@@ -2,33 +2,21 @@ package com.liason.product
 
 import grails.plugin.springsecurity.annotation.Secured
 
-@Secured("permitAll")
+@Secured(['IS_AUTHENTICATED_REMEMBERED'])
 class ProductController
 {
-	def createNewProduct(){
-		Product product=new Product(name:'my laithe machine', image:Image.get(1) , category:ProductCategory.get(1) )
-		if( !product.save() ){
-			product.errors.each{ log.debug"error occured while saving product : "+it }
-			render "error occured"
-		}
-		else render "product saved"
+	def addproduct(){
+		ArrayList categoryList=ProductCategory.list()
+		[categoryList:categoryList]
 	}
 	
-	def createImage(){
-		Image image=new Image(name:'myname.png', url:'myname.png')
-		if( !image.save() ){
-			image.errors.each{ log.debug"error occured while saving image: "+it }
-			render "error occured"
-		}
-		else render "image saved"
-	}
-	
-	def createProductSpecTable(){
-		
+	def saveNewProduct(){
+		log.debug"params for saveNewProduct : "+params
+		redirect(controller: "product", action: "addproduct")
 	}
 	
 	def productCategory(){
-		ProductCategory category=new ProductCategory(name:'laith machine')
+		ProductCategory category=new ProductCategory(name:'heavy machine')
 		if( !category.save() ){
 			category.errors.each{ log.debug"error occured while saving productCategory : "+it }
 			render "error occured"
