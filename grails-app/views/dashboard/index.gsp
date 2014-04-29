@@ -13,23 +13,9 @@
 <body >
  
  <div id="wrapper">
-    <header id="top">
-	<table width=100%" id="headertable">
-	<tr style="float:left"><td><div id="logo"><img src="${resource(dir: 'images/dashboard/', file: 'logo.png')}" alt="some_text" width="200px" height="90px"></div></td></tr>
-	<tr><td>
-	<nav id="mainnav">
-        <ul>
-            <li><a href="#">Menu1</a></li>
-            <li><a href="sightseeing.html" class="thispage">Menu2</a></li>
-            <li><a href="#">Menu3</a></li>
-            <li><a href="#">Menu4</a></li>
-            <li><a href="#">Menu5</a></li>
-        </ul>
-    </nav>
-	
-	</td></tr>
-	</table>
-    </header>
+    <div id="top">
+		<g:render template="headerLinks"></g:render>
+    </div>
     <article id="main" >
      <object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="900" height="350" align="middle">
      <param name="movie" value="../swf/My_Gallery123.swf"/>
