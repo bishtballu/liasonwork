@@ -2,6 +2,8 @@ package com.liason.auth
 
 import grails.plugin.springsecurity.annotation.Secured
 
+import com.liason.product.Product
+
 
 @Secured("permitAll")
 class DashboardController
@@ -12,6 +14,18 @@ class DashboardController
 	
 	def contactus(){
 		log.debug"params for contactus action : "+params
+	}
+	
+	def showSingleProduct(){
+		log.debug"params for showSingleProduct action : "+params
+		long productId=params.long("productId", 1)
+		render template:'productdetail', model:[product : Product.get(productId)]
+	}
+	
+	def productImageTemplate(){
+		log.debug"params for showSingleProduct action : "+params
+		long productId=params.long("productId", 1)
+		render "<img src=\"#\" width=\"200\" height=\"300\">"
 	}
 	
 	def product(){

@@ -90,12 +90,20 @@
 
 
                                     </td>
-                                    <td style="width: 10px;"></td>
-                                    <g:render template="productdetail"></g:render>
+                                    	<td style="width: 10px;"></td>
+                                    	
+                                    	<td id="productData" style="padding: 0 0 0 0px; "></td>
+                                    	
+                                    	<td style="width: 10px;"></td>
+                                    	
+										<td id="productImageTemp" style="padding-top: 10px;"></td>
                                 </tr>
-
+                                
 
                             </table>
+                            <div id="loading" class="none" style="display: none;">
+				      			<span class="spinnerPos"></span>
+				      		</div>
                         </div>
 
                     </form>
@@ -129,12 +137,41 @@
             </div>
         </div>
         </noscript>
+
 <script type="text/javascript">
+
     $(document).ready(function() {
         // Setup HoverAccordion for Example 1
         $('#supermenu').hoverAccordion();
+        showProductData("1");
     });
+
+	function showProductData(productId)
+	{
+		var productDataUrl="${createLink(controller:'dashboard', action:'showSingleProduct')}";
+		$.post( productDataUrl , { productId: productId })
+		  .done(function( data ) {
+		   		$("#productData").html(data);
+		});
+
+		var productImageUrl="${createLink(controller:'dashboard', action:'productImageTemplate')}";
+		$.post( productImageUrl , { productId: productId })
+		  .done(function( data ) {
+		   		$("#productImageTemp").html(data);
+		});
+	}
+
+	function bindAjaxCall()
+	{
+		 $("#loadingAjax").bind("ajaxSend", function() {
+		        $(this).fadeIn();
+		    }).bind("ajaxComplete", function() {
+		        $(this).fadeOut();
+		    });
+	}
+    
 </script>
+
 <style media="screen" type="text/css">
     /* Styles for Example #1 */
     #headerdiv{
