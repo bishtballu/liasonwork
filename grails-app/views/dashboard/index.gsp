@@ -16,6 +16,11 @@
     <div id="top">
 		<g:render template="headerLinks"></g:render>
     </div>
+    <div id="logoutLink">
+	            	<sec:ifLoggedIn>
+						Logged in as <sec:username/> (<g:link controller='logout'>Logout</g:link>)
+					</sec:ifLoggedIn>
+				</div>
     <article id="main" >
      <object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="900" height="350" align="middle">
      <param name="movie" value="../swf/My_Gallery123.swf"/>

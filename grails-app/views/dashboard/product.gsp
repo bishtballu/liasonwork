@@ -13,6 +13,11 @@
             <div id="main-body" class="box css" style="width: 100%;height: 134px;">
                 <g:render template="headerLinks"></g:render>
             </div>
+            <div id="logoutLink">
+	            	<sec:ifLoggedIn>
+						Logged in as <sec:username/> (<g:link controller='logout'>Logout</g:link>)
+					</sec:ifLoggedIn>
+				</div>
             <div style="height: 10px;">
                 
             </div>
@@ -113,13 +118,7 @@
 
             <div id="footer_spacer"></div>
 
-            <div id="bottom">
-                <ul>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li class="last"><a href="#">&copy; Liason Work</a></li>
-                </ul>
-            </div>
+            <g:render template="footerlinks"></g:render>
         </div>
         <!-- footer analytics go here -->
 

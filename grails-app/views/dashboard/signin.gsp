@@ -13,7 +13,7 @@
 
     <!-- Header -->
              <div id="main-body" class="box css" style="width: 100%;height: 134px;">
-                <g:render template="headerLinks"></g:render>
+                <g:render template="../dashboard/headerLinks"></g:render>
             </div>
             <div style="height: 10px;"></div>
             
@@ -27,65 +27,57 @@
 
         <div class="title first-step">
           <h2><b>Welcome Back!</b></h2>
+          
+          	<g:if test='${flash.message}'>
+				<div class='login_message'>${flash.message}</div>
+			</g:if>
         </div>
+        <br><br>
 
         <div class="title second-step extra hidden">
           <h2></h2>
           
         </div>
 
-          <form class="fancy-label" action="#" method="post">
+			<form action='${postUrl}' method='POST' id='loginForm' class='cssform fancy-label' autocomplete='off'>
             <div class="step first-step">
                   <p class="text">
                       <span>
-                          <input type="email" value="" name="email" id="email" placeholder="Email" />
+                          <input type='text' class='text_' name='j_username' id='username' placeholder="username"/>
                       </span>
                   </p>
+                  <br>
                   <p class="text">
                       <span>
-                          <input type="password" value="" name="password" id="password" placeholder="Password" />
+                          <input type='password' class='text_' name='j_password' id='password' placeholder="password"/>
                       </span>
                   </p>
+                  <br>
+                  	<p id="remember_me_holder">
+					<input type='checkbox' class='chk' name='${rememberMeParameter}' id='remember_me' <g:if test='${hasCookie}'>checked='checked'</g:if>/>
+					<label for='remember_me'><g:message code="springSecurity.login.remember.me.label"/></label>
+			</p>
             </div>
-
-            <input type="hidden" name="redirect" value="" />
-            <input type="hidden" name="invite_code" value="" />
-            <input type="hidden" name="account_invite" value="" />
-
-            <p class="submit">
-              <button class="button blue" type="submit"><span>Sign in to your account</span></button>
-            </p>
-
-            <p class="remember">
-                <label><input type="checkbox" name="remember" value="true" checked="checked" /> Remember me</label>
-            </p>
-
             
-  
-        <input type="hidden" name="io_blackbox" id="io_blackbox"/>
-
+            <input  type='submit' id="submit" value='${message(code: "springSecurity.login.button")}'/>
+			<br>
           </form>
 
       </div></div>
       <!-- FOOTER -->
+      <br><br>
       <div id="footer" class="box css">
           
-            <a href="../web/register.html">Don't have an account? <span>Sign up</span></a>
-          
-      </div><!-- END FOOTER -->
-      <div id="footer_spacer"></div>
+            <a href="#">Don't have an account? <span>Sign up</span></a>
+            <br><br>
+             <g:render template="../dashboard/footerlinks"></g:render>
 
-        <div id="bottom">
-          <ul>
-              <li class="first"><a href="#">Forgot your password?</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Contact</a></li>
-              <li class="last"><a href="#">&copy; Liason Work</a></li>
-          </ul>
-      </div>
     </div>
+    <br><br>
       </div>
       <!-- footer analytics go here -->
+  
+
   
     <noscript>
                 <div class="no-js-view">
@@ -105,4 +97,3 @@
   </body>
 
 </html>
-\
