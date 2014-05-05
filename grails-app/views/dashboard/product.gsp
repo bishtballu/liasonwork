@@ -40,59 +40,18 @@
 
                                         <div id="content">
                                             <ul id="supermenu">
-                                                <li><a href="#">Item 1</a></li>
-                                                <li><a href="#">Item 2</a>
-                                                    <ul>
-                                                        <li><a href="index.jsp?id=param1">Subitem 2a</a></li>
-                                                        <li><a href="index.jsp?id=param2">Subitem 2b</a></li>
-                                                        <li><a href="index.jsp?id=param3">Subitem 2c</a></li>
-                                                        <li><a href="index.jsp?id=param4">Subitem 2d</a></li>
-                                                        <li><a href="index.jsp?id=param5">Subitem 2e</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="#">Item 3</a></li>
-                                                <li><a href="#">Item 4</a></li>
-                                                <li><a href="#">Item 5</a>
-                                                    <ul>
-                                                        <li><a href="index.jsp?id=5a#ex1">Subitem 5a</a></li>
-                                                        <li><a href="index.jsp?id=5b#ex1">Subitem 5b</a></li>
-                                                        <li><a href="index.jsp?id=5c#ex1">Subitem 5c</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="#">Item 6</a></li>
-                                                <li><a href="#">Item 7</a>
-                                                    <ul>
-                                                        <li><a href="index.jsp?id=7a#ex1">Subitem 7a</a></li>
-                                                        <li><a href="index.jsp?id=7b#ex1">Subitem 7b</a></li>
-                                                        <li><a href="index.jsp?id=7c#ex1">Subitem 7c</a></li>
-                                                        <li><a href="index.jsp?id=7d#ex1">Subitem 7d</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="#">Item 8</a>
-                                                    <ul>
-                                                        <li><a href="index.jsp?id=8a#ex1">Subitem 8a</a></li>
-                                                        <li><a href="index.jsp?id=8b#ex1">Subitem 8b</a></li>
-                                                        <li><a href="index.jsp?id=8c#ex1">Subitem 8c</a></li>
-                                                        <li><a href="index.jsp?id=8d#ex1">Subitem 8d</a></li>
-                                                        <li><a href="index.jsp?id=8e#ex1">Subitem 8e</a></li>
-                                                        <li><a href="index.jsp?id=8f#ex1">Subitem 8f</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="#">Item 9</a>
-                                                    <ul>
-                                                        <li><a href="index.jsp?id=9a#ex1">Subitem 9a</a></li>
-                                                        <li><a href="index.jsp?id=9b#ex1">Subitem 9b</a></li>
-                                                        <li><a href="index.jsp?id=9c#ex1">Subitem 9c</a></li>
-                                                        <li><a href="index.jsp?id=9d#ex1">Subitem 9d</a></li>
-                                                        <li><a href="index.jsp?id=9e#ex1">Subitem 9e</a></li>
-                                                    </ul>
-                                                </li>
+                                            	<g:each in="${categoryList}" var="category" status="count">
+                                                	<li><a href="#">${category.name}</a>
+                                                    	<ul>
+                                                    		<g:each in="${parentProductList[count]}" var="product">
+                                                        		<li><a href="#"></a>${product.name}</li>
+                                                        	</g:each>
+                                                    	</ul>
+                                                	</li>
+                                                </g:each>
                                             </ul>
 
                                         </div>
-
-
-
 
                                     </td>
                                     	<td style="width: 10px;"></td>
@@ -142,7 +101,7 @@
     $(document).ready(function() {
         // Setup HoverAccordion for Example 1
         $('#supermenu').hoverAccordion();
-        showProductData("1");
+        showProductData("${parentProductList[0][0].id}");
     });
 
 	function showProductData(productId)
