@@ -11,14 +11,14 @@
           </g:if>
           <g:else>
           	
-          	<g:set var="numberOfCol" value="${product.productSpecTables[0].numberOfCol}"></g:set>
-          	<g:set var="numberOfRows" value="${product.productSpecTables[0].numberOfRows}"></g:set>
+          <g:set var="numberOfCol" value="${product.productSpecTables[0].numberOfCol}"></g:set>
+          <g:set var="numberOfRows" value="${product.productSpecTables[0].numberOfRows}"></g:set>
           	
           	<table style="width: 100%; border: solid;">
-          		<g:each var="row" in="${numberOfRows}">
+          		<g:each var="row" in="${0..(numberOfRows-1)}">
 	          		<tr>
-	          			<g:each var="column" in="${numberOfCol}">
-	                		<td class="productTD">${tableDataList[ (row*numberOfCol + column)] }</td>
+	          			<g:each var="column" in="${0..(numberOfCol-1)}">
+	          				<td class="productTD">${tableDataList[ (row*numberOfCol + column)] }</td>
 	                	</g:each>
 	            	</tr>
             	</g:each>
