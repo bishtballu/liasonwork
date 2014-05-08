@@ -2,6 +2,7 @@ package com.liason.auth
 
 import grails.plugin.springsecurity.annotation.Secured
 
+import com.liason.product.Image
 import com.liason.product.Product
 import com.liason.product.ProductCategory
 
@@ -28,9 +29,22 @@ class DashboardController
 	}
 	
 	def productImageTemplate(){
-		log.debug"params for showSingleProduct action : "+params
+		log.debug"params for productImageTemplate action : "+params
 		long productId=params.long("productId", 1)
-		render "<img src=\"#\" width=\"200\" height=\"300\">"
+		Image image=Product.get(productId).image
+		if(image)
+			render "<img src=\"${createLink(controller: 'dashboard', action: 'showImage' , params:[filename:image.name] )}\" width=\"200\" height=\"300\">"
+		else render ""
+	}
+	
+	def showImage(){
+		String filePath=grailsApplication.config.productImagePath
+		String filename=params.filename
+		File file = new File(filePath+filename)
+		def img = file.bytes
+		response.contentType = 'image/png' // or the appropriate image content type
+		response.outputStream << img
+		response.outputStream.flush()
 	}
 	
 	def product(){

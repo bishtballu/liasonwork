@@ -85,10 +85,12 @@ grails.hibernate.cache.queries = false
 
 environments {
     development {
+		productImagePath="/home/akash/Desktop/"
         grails.logging.jul.usebridge = true
 		grails.serverURL = "http://localhost:8080/liasonwork"
     }
     production {
+		productImagePath="/home/akash/Desktop/"
         grails.logging.jul.usebridge = false
 		grails.serverURL = "http://localhost:8080/liasonwork"
     }
