@@ -12,21 +12,20 @@ class ProductController
 	
 	def saveNewProduct(){
 		log.debug"params for saveNewProduct : "+params
+		ProductSpecTable productSpecTable=saveTable( params.int("row"), params.int("column"), params.tableData)
 		Product product=new Product(description:params.productDesc, category: ProductCategory.get(params.int("categoryName")) , name:params.productName)
+		if(productSpecTable!=null)
+			product.addToProductSpecTables(productSpecTable)
 		if( !product.save() )
 			product.errors.each{ log.debug"error occured while saving product : "+it }
-		else
-			saveTable(product, params.int("row"), params.int("column"), params.tableData)
 		redirect(controller: "product", action: "addproduct")
 	}
 	
-	private void saveTable(Product product, int row, int col, String tableData)
+	private ProductSpecTable saveTable( int row, int col, String tableData)
 	{
+		ProductSpecTable productSpecTable=null
 		if(tableData != "")
-		{
-			ProductSpecTable productSpecTable=new ProductSpecTable(numberOfCol:col, numberOfRows:row, tableData:tableData, product:product)
-			if( !productSpecTable.save() )
-				productSpecTable.errors.each{ log.debug"error occured while saving productSpecTable : "+it }
-		}
+			productSpecTable=new ProductSpecTable(numberOfCol:col, numberOfRows:row, tableData:tableData)
+		return productSpecTable
 	}
 }

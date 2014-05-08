@@ -6,8 +6,7 @@ class Product
 	Image image
 	String description
 	ProductCategory category
-	Set productTables=[]
-	static hasmany = [productTables:ProductSpecTable]
+	static hasMany = [productSpecTables:ProductSpecTable]
 
     static constraints = {
 		name(blank:false)

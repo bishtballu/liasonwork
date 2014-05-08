@@ -20,7 +20,11 @@ class DashboardController
 	def showSingleProduct(){
 		log.debug"params for showSingleProduct action : "+params
 		long productId=params.long("productId", 1)
-		render template:'productdetail', model:[product : Product.get(productId)]
+		Product product=Product.get(productId)
+		ArrayList tableDataList=[]
+		if( product.productSpecTables.size()!=0 )
+			tableDataList=product.productSpecTables[0].tableData.split("\\|\\|")
+		render template:'productdetail', model:[product : product, tableDataList:tableDataList]
 	}
 	
 	def productImageTemplate(){
