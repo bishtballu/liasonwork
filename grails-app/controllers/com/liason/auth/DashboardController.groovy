@@ -54,6 +54,7 @@ class DashboardController
 		categoryList.each {
 			parentProductList.add( Product.findAllWhere(category:it) )
 		}
+		log.debug"parentProductList : "+parentProductList
 		[parentProductList:parentProductList, categoryList:categoryList]
 	}
 	
