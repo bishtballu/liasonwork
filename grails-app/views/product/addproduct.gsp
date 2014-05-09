@@ -30,7 +30,7 @@
 			
             <div id="main-body" class="css" ><div class="inner">
                     <div class="step first-step alignCenter">
-                    	<g:form name="addProductForm" url="[action:'saveNewProduct',controller:'product']">
+                    	<g:form name="addProductForm" url="[action:'saveNewProduct',controller:'product']"  enctype="multipart/form-data">
                         <table class="tablecontact">
                             <tr>
                                 <td colspan="3" id="contactheader" >
@@ -76,7 +76,7 @@
                                    Image For Product:
                                 </td>
                                 <td  class="tablecol">
-                                    <input id="fileupload" type="file" name="productImage" id="productImage" />
+                                    <input type="file" name="productImage" id="productImage" onchange="checkfile(this);"/>
                                 </td>
                             </tr>
                             <tr>
@@ -244,6 +244,19 @@
                 else if($("#productDesc").val()=="") return "productDesc";
                 else return "";
             }
+
+            function checkfile(sender) {
+                var validExts = new Array(".png", ".jpg");
+                var fileExt = sender.value;
+                fileExt = fileExt.substring(fileExt.lastIndexOf('.'));
+                if (validExts.indexOf(fileExt) < 0) {
+                  alert("Invalid file selected, valid files are of " +
+                           validExts.toString() + " types.");
+                  return false;
+                }
+                else return true;
+            }
+           
             
         </script>
         
