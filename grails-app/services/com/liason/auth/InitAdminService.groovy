@@ -3,6 +3,7 @@ package com.liason.auth
 import grails.transaction.Transactional
 
 import com.liason.product.ProductCategory
+import com.liason.product.ProductCategoryList
 
 
 @Transactional
@@ -30,9 +31,8 @@ class InitAdminService
 	{
 		if(ProductCategory.list().size() == 0)
 		{
-			productCategory("Lathe Machine")
-			productCategory("Heavy Machine")
-			productCategory("Light Machine")
+			for(ProductCategoryList category : ProductCategoryList.values())
+				productCategory( category.toString() )
 		}
 	}
 	

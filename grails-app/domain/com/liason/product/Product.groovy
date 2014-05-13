@@ -13,4 +13,8 @@ class Product
 		description(blank:false)
 		image(nullable:true)
     }
+	
+	static mapping={
+		description type : 'text'
+	}
 }
