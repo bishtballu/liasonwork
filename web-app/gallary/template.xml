@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+  <fileName>res/template/Ring.swf</fileName>
+  <horizontalItemCount>30</horizontalItemCount>
+  <verticalItemCount>1</verticalItemCount>
+  <useLightEffect>True</useLightEffect>
+  <usePhotoFrame>True</usePhotoFrame>
+  <photoFrameColor>16777215</photoFrameColor>
+  <moveType>0</moveType>
+  <autoCycleItem>True</autoCycleItem>
+  <showReflection>True</showReflection>
+  <showBigItem>True</showBigItem>
+</template>

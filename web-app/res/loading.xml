@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ncesoft>
+  <loading>
+    <fileName>res/loading.swf</fileName>
+    <backgroundColor>0</backgroundColor>
+    <transparency>100</transparency>
+    <showText>True</showText>
+    <StreamInfo>
+      <Position>0</Position>
+      <Size>0</Size>
+    </StreamInfo>
+    <StreamInfo_XML>
+      <Position>0</Position>
+      <Size>0</Size>
+    </StreamInfo_XML>
+  </loading>
+</ncesoft>

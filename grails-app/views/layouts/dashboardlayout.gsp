@@ -14,5 +14,21 @@
 
 <r:layoutResources />
 
+<script>
+$(document).ready(function(){
+	addColorToHeader();
+});
+
+function addColorToHeader()
+{
+	var actionName='${actionName}';
+	var divId="";
+	if(actionName=="index")		divId="index";
+	else if(actionName=="contactus")	divId="contactus";
+	else if(actionName=="product")	divId="product";
+	else	divId="addproduct";
+	$("#"+divId).addClass('thispage');
+}
+</script>
 </body>
 </html>
