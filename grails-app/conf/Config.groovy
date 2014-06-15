@@ -90,9 +90,9 @@ environments {
 		grails.serverURL = "http://localhost:8080/liasonwork"
     }
     production {
-		productImagePath="/home/akash/Desktop/"
+		productImagePath="/root/productImages/"
         grails.logging.jul.usebridge = false
-		grails.serverURL = "http://localhost:8080/liasonwork"
+		grails.serverURL = "http://162.251.84.121/"
     }
 }
 
