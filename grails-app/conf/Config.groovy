@@ -92,7 +92,7 @@ environments {
     production {
 		productImagePath="/root/productImages/"
         grails.logging.jul.usebridge = false
-		grails.serverURL = "http://162.251.84.121/"
+		grails.serverURL = "http://162.251.84.121"
     }
 }
 
