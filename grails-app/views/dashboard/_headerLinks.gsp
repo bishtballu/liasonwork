@@ -10,6 +10,7 @@
 				<sec:ifLoggedIn>Add Product</sec:ifLoggedIn>
 				<sec:ifNotLoggedIn>Login</sec:ifNotLoggedIn>
 			</a></li>
+			<li><a href="${createLink(action:'services', controller:'dashboard')}" id="services" >Services</a></li>
         </ul>
     </div>
 	

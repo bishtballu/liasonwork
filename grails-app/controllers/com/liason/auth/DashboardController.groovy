@@ -65,4 +65,8 @@ class DashboardController
 	def signin(){
 		log.debug"params for signin action : "+params
 	}
+	
+	def services(){
+		log.debug"params for signin action : "+params
+	}
 }

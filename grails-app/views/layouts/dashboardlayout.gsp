@@ -25,6 +25,7 @@ function addColorToHeader()
 	var divId="";
 	if(actionName=="index")		divId="index";
 	else if(actionName=="contactus")	divId="contactus";
+	else if(actionName=="services")		divId="services"
 	else if(actionName=="product")	divId="product";
 	else	divId="addproduct";
 	$("#"+divId).addClass('thispage');
