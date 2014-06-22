@@ -44,7 +44,7 @@
                                                 	<li><a href="#">${category.name}</a>
                                                     	<ul>
                                                     		<g:each in="${parentProductList[count]}" var="product">
-                                                        		<li><a href="javascript:showProductData('${product.id}')">${product.name}</a></li>
+                                                        		<li><a href="javascript:showProductData('${product.id}')"><font size="2" color="blue">${product.name}</font></a></li>
                                                         	</g:each>
                                                     	</ul>
                                                 	</li>
