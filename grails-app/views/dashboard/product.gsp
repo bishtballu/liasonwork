@@ -54,13 +54,13 @@
                                         </div>
 
                                     </td>
-                                    	<td style="width: 10px;"></td>
+                                    	<td style="width: 10px;vertical-align: top;"></td>
                                     	
                                     	<td id="productData" style="padding: 0 0 0 0px; "></td>
                                     	
                                     	<td style="width: 10px;"></td>
                                     	
-										<td id="productImageTemp" style="padding-top: 10px;"></td>
+										<td id="productImageTemp" style="padding-top: 10px; vertical-align: top;"></td>
                                 </tr>
                                 
 

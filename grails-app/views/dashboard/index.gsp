@@ -2,7 +2,7 @@
 <html>
 <head>
 
-
+<meta name="google-site-verification" content="H5cgO-SzLUvIUAud0-ocJtPtMPj5hv99VJ-RXUGddOE" />
 <meta charset="utf-8">
 <title>New Website</title>
 <link href="${resource(dir: 'css/dashboard/', file: 'main.css')}" rel="stylesheet" type="text/css">
