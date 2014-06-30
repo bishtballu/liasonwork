@@ -207,7 +207,7 @@ html#no-background{
     background:0
 }
 body{
-    overflow-y:scroll;min-height:100%;-webkit-font-smoothing:antialiased
+    min-height:100%;-webkit-font-smoothing:antialiased
 }
 @media screen and (-webkit-min-device-pixel-ratio:0){
     html{font-family:"HelveticaNeue",Helvetica,Arial,sans-serif}
