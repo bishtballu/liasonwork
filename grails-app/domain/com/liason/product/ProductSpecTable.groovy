@@ -11,4 +11,8 @@ class ProductSpecTable
     static constraints = {
 		tableData(blank:false)
     }
+	
+	static mapping={
+		tableData type : 'text'
+	}
 }
