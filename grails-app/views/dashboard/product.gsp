@@ -35,7 +35,7 @@
 
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr style="vertical-align: top;padding-top: 10px;">
                                     <td style="vertical-align: top;padding-top: 10px;">
 
                                         <div id="content">
