@@ -69,4 +69,8 @@ class DashboardController
 	def services(){
 		log.debug"params for signin action : "+params
 	}
+	
+	def enquiry(){
+		log.debug"params for enquiry action : "+params
+	}
 }
