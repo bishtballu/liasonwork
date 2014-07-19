@@ -18,6 +18,8 @@ class ProductEnquiry
 	
     static constraints = {
 		emailId email:true
+		websiteUrl nullable:true,blank:true
+		country nullable:true,blank:true
     }
 	
 	static mapping={

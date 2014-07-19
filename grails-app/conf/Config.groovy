@@ -88,11 +88,13 @@ environments {
 		productImagePath="/home/akash/Desktop/"
         grails.logging.jul.usebridge = true
 		grails.serverURL = "http://localhost:8080/liasonwork"
+		adminEmail="akash.sharma@oodlestechnologies.com"
     }
     production {
 		productImagePath="/root/productImages/"
         grails.logging.jul.usebridge = false
 		grails.serverURL = "http://162.251.84.121"
+		adminEmail="akash.sharma@oodlestechnologies.com"
     }
 }
 
@@ -137,4 +139,17 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	'/**/images/**':                  ['permitAll'],
 	'/**/favicon.ico':                ['permitAll']
 ]
+
+grails {
+	mail {
+	  host = "smtp.gmail.com"
+	  port = 465
+	  username = "ari.americanresourcecenter@gmail.com"
+	  password = "superadmin"
+	  props = ["mail.smtp.auth":"true",
+			   "mail.smtp.socketFactory.port":"465",
+			   "mail.smtp.socketFactory.class":"javax.net.ssl.SSLSocketFactory",
+			   "mail.smtp.socketFactory.fallback":"false"]
+	}
+ }
 

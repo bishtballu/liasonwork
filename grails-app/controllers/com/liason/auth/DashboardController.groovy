@@ -56,7 +56,9 @@ class DashboardController
 			parentProductList.add( Product.findAllWhere(category:it) )
 		}
 		log.debug"parentProductList : "+parentProductList
-		[parentProductList:parentProductList, categoryList:categoryList, isEnquirySaved:params.isEnquirySaved]
+		String isEnquirySaved=session.getAttribute("isEnquirySaved")
+		session.setAttribute("isEnquirySaved",null)
+		[parentProductList:parentProductList, categoryList:categoryList, isEnquirySaved:isEnquirySaved]
 	}
 	
 	def register(){
@@ -73,17 +75,22 @@ class DashboardController
 	
 	def enquiry(){
 		log.debug"params for enquiry action : "+params
+		String isEnquirySaved=session.getAttribute("isEnquirySaved")
+		session.setAttribute("isEnquirySaved", null)
+		[isEnquirySaved:isEnquirySaved]
 	}
 	
 	def submitEnquiry(){
 		log.debug"params for submitEnquiry action : "+params
+		session.setAttribute("isEnquirySaved", "true")
 		ProductEnquiry enquiry=new ProductEnquiry(params)
 		if(!enquiry.save())
 		{
 			enquiry.errors.each {log.debug"error occured while saving enquiry : "+it}
-			forward(action:'enquiry' , params: [isEnquirySaved: "false"])
+			session.setAttribute("isEnquirySaved", "false")
+			redirect(action:'enquiry')
 		}
 		else
-			forward(action:'product' , params: [isEnquirySaved: "true"])
+			redirect(action:'product')
 	}
 }

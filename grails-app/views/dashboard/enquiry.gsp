@@ -352,6 +352,22 @@
 			alert('please fill up Street Address');
 			return false;
 		}
+		else if($('#addressLine2').val()==''){
+			alert('please fill up address Line 2');
+			return false;
+		}
+		else if($('#city').val()==''){
+			alert('please fill up city');
+			return false;
+		}
+		else if($('#state').val()==''){
+			alert('please fill up state');
+			return false;
+		}
+		else if($('#zipCode').val()==''){
+			alert('please fill up zipCode');
+			return false;
+		}
 		return true;
 	}
 
