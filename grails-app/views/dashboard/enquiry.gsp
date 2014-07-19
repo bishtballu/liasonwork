@@ -1,17 +1,20 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
+    <g:javascript library="jquery"></g:javascript>
+	<r:layoutResources />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
             <title>Query A Product</title>
            <link rel="stylesheet" type="text/css" href="${createLinkTo(dir:'css/dashboard',file:'enquiry.css')}" media="all">
                 
                 </head>
                 <body id="main_body" >
+                
 
                         <div id="form_container">
 
                             <h1><a>Query A Product</a></h1>
-                            <form id="form_871865" class="appnitro"  method="post" action="">
+                            <g:form id="enquiryForm" class="appnitro"  method="post" action="enquiryForm" url="[action:'submitEnquiry',controller:'dashboard']">
                                 <div class="form_description">
                                     <h2>Query A Product</h2>
                                     <p>This is your Product description form</p>
@@ -21,63 +24,67 @@
                                     <li id="li_2" >
                                         <label class="description" for="element_2">Name </label>
                                         <span>
-                                            <input id="element_2_1" name= "element_2_1" class="element text" maxlength="255" size="8" value="" onblur="if(isNaN(this.value)) {alert('invalid value');}"/>
+                                            <input id="firstname" name= "firstname" class="element text" maxlength="255" size="8" value="" onblur="blankValidation(this);"/>
                                             <label>First</label>
+                                            <small class="guidelines">fill your name here</small> 
                                         </span>
                                         <span>
-                                            <input id="element_2_2" name= "element_2_2" class="element text" maxlength="255" size="14" value=""/>
+                                            <input id="lastname" name= "lastname" class="element text" maxlength="255" size="14" value="" onblur="blankValidation(this);"/>
                                             <label>Last</label>
+                                            <small class="guidelines">fill your name here</small> 
                                         </span> 
                                     </li>		<li id="li_3" >
-                                        <label class="description" for="element_3">Mobile Number </label>
+                                        <label class="description" for="mobileNumber">Mobile Number </label>
                                         <div>
-                                            <input id="element_3" name="element_3" class="element text medium" type="text" maxlength="255" value=""/> 
+                                            <input id="mobileNumber" name="mobileNumber" class="element text medium" type="text" maxlength="255" value="" onkeypress="if(!validateNumber(event.which))return false;" onblur="blankValidation(this);"/>
+                                            <small class="guidelines">fill your mobile number</small>  
                                         </div> 
                                     </li>		<li id="li_4" >
-                                        <label class="description" for="element_4">Email </label>
+                                        <label class="description" for="emailId">Email </label>
                                         <div>
-                                            <input id="element_4" name="element_4" class="element text medium" type="text" maxlength="255" value=""/> 
+                                            <input id="emailId" name="emailId" class="element text medium" type="text" maxlength="255" value="" onblur="blankValidation(this);"/>
+                                            <small class="guidelines">fill your Email Id</small>  
                                         </div> 
                                     </li>		<li id="li_5" >
-                                        <label class="description" for="element_5">Web Site </label>
+                                        <label class="description" for="webSite">Web Site </label>
                                         <div>
-                                            <input id="element_5" name="element_5" class="element text medium" type="text" maxlength="255" value="http://"/> 
+                                            <input id="webSite" name="webSite" class="element text medium" type="text" maxlength="255" value="http://"/> 
                                         </div> 
                                     </li>		<li id="li_1" >
-                                        <label class="description" for="element_1">Product Description </label>
+                                        <label class="description" for="productDescription">Product Description </label>
                                         <div>
-                                            <textarea id="element_1" name="element_1" class="element textarea medium"></textarea> 
+                                            <textarea id="productDescription" name="productDescription" class="element textarea medium" onblur="blankValidation(this);"></textarea> 
                                         </div><p class="guidelines" id="guide_1"><small>Fill your query for product</small></p> 
                                     </li>		<li id="li_6" >
-                                        <label class="description" for="element_6">Address </label>
+                                        <label class="description" for="productDescription">Address </label>
 
                                         <div>
-                                            <input id="element_6_1" name="element_6_1" class="element text large" value="" type="text">
-                                                <label for="element_6_1">Street Address</label>
+                                            <input id="streetAddress" name="streetAddress" class="element text large" value="" type="text" onblur="blankValidation(this);">
+                                                <label for="streetAddress">Street Address</label>
                                         </div>
 
                                         <div>
-                                            <input id="element_6_2" name="element_6_2" class="element text large" value="" type="text">
-                                                <label for="element_6_2">Address Line 2</label>
+                                            <input id="addressLine2" name="addressLine2" class="element text large" value="" type="text" onblur="blankValidation(this);">
+                                                <label for="addressLine2">Address Line 2</label>
                                         </div>
 
                                         <div class="left">
-                                            <input id="element_6_3" name="element_6_3" class="element text medium" value="" type="text">
-                                                <label for="element_6_3">City</label>
+                                            <input id="city" name="city" class="element text medium" value="" type="text" onblur="blankValidation(this);">
+                                                <label for="city">City</label>
                                         </div>
 
                                         <div class="right">
-                                            <input id="element_6_4" name="element_6_4" class="element text medium" value="" type="text">
-                                                <label for="element_6_4">State / Province / Region</label>
+                                            <input id="state" name="state" class="element text medium" value="" type="text" onblur="blankValidation(this);">
+                                                <label for="state">State / Province / Region</label>
                                         </div>
 
                                         <div class="left">
-                                            <input id="element_6_5" name="element_6_5" class="element text medium" maxlength="15" value="" type="text">
-                                                <label for="element_6_5">Postal / Zip Code</label>
+                                            <input id="zipCode" name="zipCode" class="element text medium" maxlength="15" value="" type="text" onkeypress="if(!validateNumber(event.which))return false;" onblur="blankValidation(this);">
+                                                <label for="zipCode">Postal / Zip Code</label>
                                         </div>
 
                                         <div class="right">
-                                            <select class="element select medium" id="element_6_6" name="element_6_6"> 
+                                            <select class="element select medium" id="country" name="country"> 
                                                 <option value="Select" selected="selected">Select</option>
                                                 <option value="Afghanistan" >Afghanistan</option>
                                                 <option value="Albania" >Albania</option>
@@ -275,7 +282,7 @@
                                                 <option value="Zimbabwe" >Zimbabwe</option>
 
                                             </select>
-                                            <label for="element_6_6">Country</label>
+                                            <label for="country">Country</label>
                                         </div> 
                                     </li>
 
@@ -284,24 +291,39 @@
                                         <input id="saveForm" class="button_text" type="submit" name="submit" value="Submit" onclick="submitDetail();"/>
                                     </li>
                                 </ul>
-                            </form>	
+                            </g:form>	
 
                         </div>
                         
-						<script>
-						function submitDetail(){
-							var firstName = document.getElementById("element_2_1").value;
-							var lastName = document.getElementById("element_2_2").value;
-							var mobileNumber =document.getElementById("element_3").value; 
-							var emailAddress = document.getElementById("element_4").value;
-							var website = document.getElementById("element_5").value;
-							var website = document.getElementById("element_1").value;
-							var address =document.getElementById("element_6_1").value+" , "+ document.getElementById("element_6_2").value+" , "+ document.getElementById("element_6_3").value+ " , "+ document.getElementById("element_6_4").value+" , "+ document.getElementById("element_6_5").value+" , "+document.getElementById("element_6_6").value;
-							alert(address);
-						
-						}
-						
-						</script>
+<script>
+	function blankValidation(element){
+		if(element.value=='')
+			element.style.border = "solid 1px red";
+		else if(element.id=='emailId' && !IsEmail(element.value))
+			element.style.border = "solid 1px red";
+		else
+			element.style.border = "solid 1px green";
+	}
+
+	function validateNumber(ascaaiVal){
+		if(ascaaiVal>57)
+			return false;
+		else if(ascaaiVal<48)
+			return false;
+		else
+			return true;
+	}
+
+	function IsEmail(email) {
+		var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+		return regex.test(email);
+	}
+	
+	function submitDetail(){
+		
+	}
+
+</script>
 						
     </body>
                             </html>

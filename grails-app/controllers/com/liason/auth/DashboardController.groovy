@@ -73,4 +73,9 @@ class DashboardController
 	def enquiry(){
 		log.debug"params for enquiry action : "+params
 	}
+	
+	def submitEnquiry(){
+		log.debug"params for submitEnquiry action : "+params
+		redirect(action:'enquiry')
+	}
 }
