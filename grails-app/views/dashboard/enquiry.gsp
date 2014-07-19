@@ -1,6 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
+    
     <g:javascript library="jquery"></g:javascript>
 	<r:layoutResources />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -12,12 +13,13 @@
                 
 
                         <div id="form_container">
-
-                            <h1><a>Query A Product</a></h1>
+<div id="logo"><img src="${resource(dir: 'images/dashboard/', file: 'logo.png')}" alt="some_text" width="200px" height="90px"></div>
+                            <h1>Query A Product</h1>
                             <g:form id="enquiryForm" class="appnitro"  method="post" action="enquiryForm" url="[action:'submitEnquiry',controller:'dashboard']">
                                 <div class="form_description">
                                     <h2>Query A Product</h2>
-                                    <p>This is your Product description form</p>
+                                    <p>This is your Product description form (<a href="<g:createLink action='product' controller='dashboard'/>">Go Back To Products</a>)</p>
+                                    
                                 </div>						
                                 <ul >
 
@@ -48,19 +50,19 @@
                                     </li>		<li id="li_5" >
                                         <label class="description" for="webSite">Web Site </label>
                                         <div>
-                                            <input id="webSite" name="webSite" class="element text medium" type="text" maxlength="255" value="http://"/> 
+                                            <input id="websiteUrl" name="websiteUrl" class="element text medium" type="text" maxlength="255" value="http://"/> 
                                         </div> 
                                     </li>		<li id="li_1" >
                                         <label class="description" for="productDescription">Product Description </label>
                                         <div>
-                                            <textarea id="productDescription" name="productDescription" class="element textarea medium" onblur="blankValidation(this);"></textarea> 
+                                            <textarea id="enquiryDesription" name="enquiryDesription" class="element textarea medium" onblur="blankValidation(this);"></textarea> 
                                         </div><p class="guidelines" id="guide_1"><small>Fill your query for product</small></p> 
                                     </li>		<li id="li_6" >
-                                        <label class="description" for="productDescription">Address </label>
+                                        <label class="description" for="enquiryDesription">Address </label>
 
                                         <div>
-                                            <input id="streetAddress" name="streetAddress" class="element text large" value="" type="text" onblur="blankValidation(this);">
-                                                <label for="streetAddress">Street Address</label>
+                                            <input id="addressLine1" name="addressLine1" class="element text large" value="" type="text" onblur="blankValidation(this);">
+                                                <label for="addressLine1">Street Address</label>
                                         </div>
 
                                         <div>
@@ -288,7 +290,7 @@
 
                                     <li class="formbuttons">
                                         
-                                        <input id="saveForm" class="button_text" type="submit" name="submit" value="Submit" onclick="submitDetail();"/>
+                                        <input id="saveForm" class="button_text" type="submit" name="submit" value="Submit" onclick="if(!submitDetail())return false;"/>
                                     </li>
                                 </ul>
                             </g:form>	
@@ -296,6 +298,12 @@
                         </div>
                         
 <script>
+	$(document).ready(function(){
+		var isEnquirySaved='${isEnquirySaved}';
+		if(isEnquirySaved=='false')
+			alert('Something went wrong while saving your enquiry');
+	});
+
 	function blankValidation(element){
 		if(element.value=='')
 			element.style.border = "solid 1px red";
@@ -320,7 +328,31 @@
 	}
 	
 	function submitDetail(){
-		
+		if($('#firstname').val()==''){
+			alert('please fill up firstname');
+			return false;
+		}
+		else if($('#lastname').val()==''){
+			alert('please fill up lastname');
+			return false;
+		}
+		else if($('#mobileNumber').val()==''){
+			alert('please fill up mobileNumber');
+			return false;
+		}
+		else if($('#emailId').val()=='' || !IsEmail($('#emailId').val())){
+			alert('please fill up valid emailId');
+			return false;
+		}
+		else if($('#enquiryDesription').val()==''){
+			alert('please fill up enquiry Desription ');
+			return false;
+		}
+		else if($('#addressLine1').val()==''){
+			alert('please fill up Street Address');
+			return false;
+		}
+		return true;
 	}
 
 </script>

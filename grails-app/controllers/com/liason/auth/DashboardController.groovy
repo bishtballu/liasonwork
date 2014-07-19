@@ -5,6 +5,7 @@ import grails.plugin.springsecurity.annotation.Secured
 import com.liason.product.Image
 import com.liason.product.Product
 import com.liason.product.ProductCategory
+import com.liason.product.ProductEnquiry
 
 
 @Secured("permitAll")
@@ -55,7 +56,7 @@ class DashboardController
 			parentProductList.add( Product.findAllWhere(category:it) )
 		}
 		log.debug"parentProductList : "+parentProductList
-		[parentProductList:parentProductList, categoryList:categoryList]
+		[parentProductList:parentProductList, categoryList:categoryList, isEnquirySaved:params.isEnquirySaved]
 	}
 	
 	def register(){
@@ -76,6 +77,13 @@ class DashboardController
 	
 	def submitEnquiry(){
 		log.debug"params for submitEnquiry action : "+params
-		redirect(action:'enquiry')
+		ProductEnquiry enquiry=new ProductEnquiry(params)
+		if(!enquiry.save())
+		{
+			enquiry.errors.each {log.debug"error occured while saving enquiry : "+it}
+			forward(action:'enquiry' , params: [isEnquirySaved: "false"])
+		}
+		else
+			forward(action:'product' , params: [isEnquirySaved: "true"])
 	}
 }

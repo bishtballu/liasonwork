@@ -61,6 +61,7 @@
                                     	<td style="width: 10px;"></td>
                                     	
 										<td id="productImageTemp" style="padding-top: 10px; vertical-align: top;"></td>
+										
                                 </tr>
                                 
 
@@ -102,7 +103,15 @@
         // Setup HoverAccordion for Example 1
         $('#supermenu').hoverAccordion();
         showProductData("${parentProductList[0][0].id}");
+        isEnquirySaved();
     });
+
+    function isEnquirySaved()
+    {
+    	var isEnquirySaved='${isEnquirySaved}';
+        if(isEnquirySaved=='true')
+            alert('Thanks.. Your Enquiry submitted to Administrator');
+    }
 
 	function showProductData(productId)
 	{
@@ -115,7 +124,9 @@
 		var productImageUrl="${createLink(controller:'dashboard', action:'productImageTemplate')}";
 		$.post( productImageUrl , { productId: productId })
 		  .done(function( data ) {
-		   		$("#productImageTemp").html(data);
+			  	var enquiryLink='${createLink(action:'enquiry' , controller:'dashboard')}';
+			  	var enquiryLinkHtml="<a href='"+enquiryLink+"' style='color:#3399CC;'>Go For Enquiry</a>";
+		   		$("#productImageTemp").html(data+enquiryLinkHtml);
 		});
 	}
 
