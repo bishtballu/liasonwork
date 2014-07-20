@@ -88,13 +88,13 @@ environments {
 		productImagePath="/home/akash/Desktop/"
         grails.logging.jul.usebridge = true
 		grails.serverURL = "http://localhost:8080/liasonwork"
-		adminEmail="akash.sharma@oodlestechnologies.com"
+		adminEmail="mutualproject908@gmail.com"
     }
     production {
 		productImagePath="/root/productImages/"
         grails.logging.jul.usebridge = false
 		grails.serverURL = "http://162.251.84.121"
-		adminEmail="akash.sharma@oodlestechnologies.com"
+		adminEmail="mutualproject908@gmail.com"
     }
 }
 
@@ -144,7 +144,7 @@ grails {
 	mail {
 	  host = "smtp.gmail.com"
 	  port = 465
-	  username = "ari.americanresourcecenter@gmail.com"
+	  username = "liasonwork@gmail.com"
 	  password = "superadmin"
 	  props = ["mail.smtp.auth":"true",
 			   "mail.smtp.socketFactory.port":"465",

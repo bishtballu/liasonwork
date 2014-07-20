@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<flash_parameters copyright="anvsoftPFMTheme">
+    <preferences>
+        <global>
+            <basic_property movieWidth="900" movieHeight="350" backgroundColor="0x000000" html_title="" anvsoftMenu="false" enableURL="false" frameRate="30"/>
+            <music_property path="" stream="false" loop="false"/>
+        </global>
+        <thumbnail>
+            <basic_property thumWidth="140" thumHeight="100" layerOfThum="2" thumNumOfLayer="3" spacingOfRow="15" spacingOfColumn="15" rotationSpeed="15"/>
+        </thumbnail>
+    </preferences>
+    <album>
+        <slide jpegURL="thumbs/t_0001.jpg" d_URL="slides/p_0001.jpg" transition="0" panzoom="1" URLTarget="2" phototime="2" transitiontime="2" url="drawingservice.in" title="item_2" width="900" height="350"/>
+        <slide jpegURL="thumbs/t_0002.jpg" d_URL="slides/p_0002.jpg" transition="0" panzoom="1" URLTarget="2" phototime="2" transitiontime="2" url="drawingservice.in" title="item_2" width="900" height="350"/>
+        <slide jpegURL="thumbs/t_0003.jpg" d_URL="slides/p_0003.jpg" transition="0" panzoom="1" URLTarget="2" phototime="2" transitiontime="2" url="drawingservice.in" title="item_2" width="900" height="350"/>
+        <slide jpegURL="thumbs/t_0004.jpg" d_URL="slides/p_0004.jpg" transition="0" panzoom="1" URLTarget="2" phototime="2" transitiontime="2" url="drawingservice.in" title="item_2" width="900" height="350"/>
+        <slide jpegURL="thumbs/t_0005.jpg" d_URL="slides/p_0005.jpg" transition="0" panzoom="1" URLTarget="2" phototime="2" transitiontime="2" url="drawingservice.in" title="item_2" width="900" height="350"/>
+        <slide jpegURL="thumbs/t_0006.jpg" d_URL="slides/p_0006.jpg" transition="0" panzoom="1" URLTarget="2" phototime="2" transitiontime="2" url="drawingservice.in" title="item_2" width="900" height="350"/>
+        <slide jpegURL="thumbs/t_0007.jpg" d_URL="slides/p_0007.jpg" transition="0" panzoom="1" URLTarget="2" phototime="2" transitiontime="2" url="drawingservice.in" title="item_2" width="900" height="350"/>
+        <slide jpegURL="thumbs/t_0008.jpg" d_URL="slides/p_0008.jpg" transition="0" panzoom="1" URLTarget="2" phototime="2" transitiontime="2" url="drawingservice.in" title="item_2" width="900" height="350"/>
+        <slide jpegURL="thumbs/t_0009.jpg" d_URL="slides/p_0009.jpg" transition="0" panzoom="1" URLTarget="2" phototime="2" transitiontime="2" url="drawingservice.in" title="item_2" width="900" height="350"/>
+        <slide jpegURL="thumbs/t_0010.jpg" d_URL="slides/p_0010.jpg" transition="0" panzoom="1" URLTarget="2" phototime="2" transitiontime="2" url="drawingservice.in" title="item_2" width="900" height="350"/>
+        <slide jpegURL="thumbs/t_0011.jpg" d_URL="slides/p_0011.jpg" transition="0" panzoom="1" URLTarget="2" phototime="2" transitiontime="2" url="drawingservice.in" title="item_2" width="900" height="350"/>
+        <slide jpegURL="thumbs/t_0012.jpg" d_URL="slides/p_0012.jpg" transition="0" panzoom="1" URLTarget="2" phototime="2" transitiontime="2" url="drawingservice.in" title="item_2" width="900" height="350"/>
+        <slide jpegURL="thumbs/t_0013.jpg" d_URL="slides/p_0013.jpg" transition="0" panzoom="1" URLTarget="2" phototime="2" transitiontime="2" url="drawingservice.in" title="item_2" width="900" height="350"/>
+        <slide jpegURL="thumbs/t_0014.jpg" d_URL="slides/p_0014.jpg" transition="0" panzoom="1" URLTarget="2" phototime="2" transitiontime="2" url="drawingservice.in" title="item_2" width="900" height="350"/>
+        <slide jpegURL="thumbs/t_0015.jpg" d_URL="slides/p_0015.jpg" transition="0" panzoom="1" URLTarget="2" phototime="2" transitiontime="2" url="drawingservice.in" title="item_2" width="900" height="350"/>
+        <slide jpegURL="thumbs/t_0016.jpg" d_URL="slides/p_0016.jpg" transition="0" panzoom="1" URLTarget="2" phototime="2" transitiontime="2" url="drawingservice.in" title="item_2" width="900" height="350"/>
+        <slide jpegURL="thumbs/t_0017.jpg" d_URL="slides/p_0017.jpg" transition="0" panzoom="1" URLTarget="2" phototime="2" transitiontime="2" url="drawingservice.in" title="item_2" width="900" height="350"/>
+        <slide jpegURL="thumbs/t_0018.jpg" d_URL="slides/p_0018.jpg" transition="0" panzoom="1" URLTarget="2" phototime="2" transitiontime="2" url="drawingservice.in" title="item_2" width="900" height="350"/>
+        <slide jpegURL="thumbs/t_0019.jpg" d_URL="slides/p_0019.jpg" transition="0" panzoom="1" URLTarget="2" phototime="2" transitiontime="2" url="drawingservice.in" title="item_2" width="900" height="350"/>
+        <slide jpegURL="thumbs/t_0020.jpg" d_URL="slides/p_0020.jpg" transition="0" panzoom="1" URLTarget="2" phototime="2" transitiontime="2" url="drawingservice.in" title="item_2" width="900" height="350"/>
+        <slide jpegURL="thumbs/t_0021.jpg" d_URL="slides/p_0021.jpg" transition="0" panzoom="1" URLTarget="2" phototime="2" transitiontime="2" url="drawingservice.in" title="item_2" width="900" height="350"/>
+        <slide jpegURL="thumbs/t_0022.jpg" d_URL="slides/p_0022.jpg" transition="0" panzoom="1" URLTarget="2" phototime="2" transitiontime="2" url="drawingservice.in" title="item_2" width="900" height="350"/>
+        <slide jpegURL="thumbs/t_0023.jpg" d_URL="slides/p_0023.jpg" transition="0" panzoom="1" URLTarget="2" phototime="2" transitiontime="2" url="drawingservice.in" title="item_2" width="900" height="350"/>
+        <slide jpegURL="thumbs/t_0024.jpg" d_URL="slides/p_0024.jpg" transition="0" panzoom="1" URLTarget="2" phototime="2" transitiontime="2" url="drawingservice.in" title="item_2" width="900" height="350"/>
+    </album>
+</flash_parameters>

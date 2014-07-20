@@ -24,46 +24,21 @@
 					</sec:ifLoggedIn>
 				</div>
     <article id="main" >
-     <object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="900" height="350" align="middle">
-     <param name="movie" value="static/My_Gallery123.swf"/>
-	 <param name="play" value="true">
-     <param name="quality" value="high"/>
-     <param name="wmode" value="transparent"/>
-     <param name="bgcolor" value="0"/>
-     <param name="allowScriptAccess" value="always"/>
-     <param name="allowFullScreen" value="false"/>
-	 <param name="swfversion" value="9.0.45.0"/>
-	 
-  <!-- This param tag prompts users with Flash Player 6.0 r65 and higher to download the latest version of Flash Player. Delete it if you don¡¯t want users to see the prompt. -->
-  <!-- Next object tag is for non-IE browsers. So hide it from IE using IECC. -->   
-  <!--[if !IE]>-->
-  <object type="application/x-shockwave-flash" data="static/My_Gallery123.swf" width="900" height="350" align="middle">
-	<!--<![endif]-->
-	  <param name="movie" value="static/My_Gallery123.swf"/>
-	  <param name="play" value="true">
-	  <param name="quality" value="high"/>
-	  <param name="wmode" value="transparent"/>
-	  <param name="bgcolor" value="0"/>
-	  <param name="allowScriptAccess" value="always"/>
-	  <param name="allowFullScreen" value="false"/>
-	  <param name="swfversion" value="9.0.45.0"/>
-	  
-	<!-- The browser displays the following alternative content for users with Flash Player 6.0 and older. -->
-	<div>
-	  <h4>Content on this page requires a newer version of Adobe Flash Player.</h4>
-	  <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" width="112" height="33" /></a></p>
-	</div>
-	<!--[if !IE]>-->
+     <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"  width="900" height="350" id="tech" align="middle" quality="high" allowFullScreen="true" wmode="transparent" allowScriptAccess="always">
+    <param name="movie" value="static/myalbum.swf?xml_path=static/slides.xml" />
+    <param name="quality" value="high" />
+    <param name="allowFullScreen" value="true" />
+    <param name="wmode" value="transparent" />
+    <param name="allowScriptAccess" value="always" />
+    <embed src="static/myalbum.swf?xml_path=static/slides.xml" width="900" height="350" quality="high" allowFullScreen="true" wmode="transparent" allowScriptAccess="always" name="tech" align="middle" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
   </object>
-  <!--<![endif]-->
-</object>
         
     </article>
     <aside id="sidebar">
       
     </aside>
     <footer>
-        <p>© 2013 company</p>
+        <p>© 2014 company</p>
     </footer>
 </div>
 </body>

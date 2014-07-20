@@ -94,22 +94,25 @@
                                                 <input class="contacttab" style="padding-left: 10%; background-image: url(${resource(dir: 'images/dashboard/', file: 'name.png')});" type="text" value="" name="name" id="name" placeholder="Name" />
                                             </span>
                                         </p>
-
+                                        <br>
                                         <p class="text" >
                                             <span>
                                                 <input class="contacttab" style="padding-left: 10%; background-image: url(${resource(dir: 'images/dashboard/', file: 'phone.png')});" type="text" value="" name="mobile" id="companyname" placeholder="Mobile Number" />
                                             </span>
                                         </p>
+                                        <br>
                                         <p class="text" >
                                             <span>
                                                 <input class="contacttab" style="padding-left: 10%; background-image: url(${resource(dir: 'images/dashboard/', file: 'email.png')});" type="text" value="" name="email" id="companyname" placeholder="Email" />
                                             </span>
                                         </p>
+                                        <br>
                                         <p class="text" >
                                             <span>
                                                 <input class="contacttab" style="padding-left: 10%; background-image: url(${resource(dir: 'images/dashboard/', file: 'website.png')});" type="text" value="" name="website" id="website" placeholder="Website" />
                                             </span>
                                         </p>
+                                        <br>
                                         <p class="text" >
                                             <span>
                                                 <textarea name="textarea" class="contacttab" style="width: 88%;padding-left: 10%; background-image: url(${resource(dir: 'images/dashboard/', file: 'comments.png')});" id="comments" cols="4" rows="8" placeholder="Comments" ></textarea>
