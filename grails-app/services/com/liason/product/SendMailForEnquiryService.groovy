@@ -42,5 +42,6 @@ class SendMailForEnquiryService
 			Thanks
 				"""
 		}
+		log.debug"mail sent for user with mail : "+enquiry.emailId
 	}
 }

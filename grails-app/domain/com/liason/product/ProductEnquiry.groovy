@@ -14,7 +14,7 @@ class ProductEnquiry
 	String city
 	String zipCode
 	String country
-	boolean isMailSent
+	boolean isMailSent=false
 	
     static constraints = {
 		emailId email:true
