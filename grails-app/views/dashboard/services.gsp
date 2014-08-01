@@ -37,28 +37,46 @@
 
 <div class="content">
 <ul class="ca-menu">
+
 	<li>
 	<a href="javascript:showTab('productivity')">
 	<span class="ca-icon">PRODUCTIVITY</span>
-	
 	</a>
-	
 	</li>
+	
 	<li>
 	<a href="javascript:showTab('safety')">
-	<span class="ca-icon">SAFETY</span>
-	
+	<span class="ca-icon">SAFETY</span>	
 	</a>
-	
 	</li>
+	
 	<li>
 	<a href="javascript:showTab('expertise')">
 	<span class="ca-icon">EXPERTISE</span>
 	</a>
 	</li>
+	
 	<li>
 	<a href="javascript:showTab('installation')">
 	<span class="ca-icon">INSTALLATION</span>
+	</a>
+	</li>
+	
+	<li>
+	<a href="javascript:showTab('commisioningAndTesting')">
+	<span class="ca-icon">COMMISIONING</span>
+	</a>
+	</li>
+	
+	<li>
+	<a href="javascript:showTab('designingDrawingFabrication')">
+	<span class="ca-icon">DESIGNING</span>
+	</a>
+	</li>
+	
+	<li>
+	<a href="javascript:showTab('marketing')">
+	<span class="ca-icon">MARKETING</span>
 	</a>
 	</li>
 	
@@ -68,7 +86,82 @@
 
 </td> 
 
-
+	<td id="commisioningAndTesting1" style="width:45%;vertical-align: top;">
+          <div style="text-align: center; font-size: 30px;">COMMISIONING AND TESTING</div><hr>
+          <div style="padding-left: 12px;padding-right: 12px;text-align:justify;font-weight:bold; font-style: italic;border-left: solid;border-right: solid;">
+                                        
+	                                 System commissioning after installation is performed to ensure that the leak detection system can provide
+				gas leak detection coverage in the entire area it is supposed to. During the commissioning, all Gassonic
+				ultrasonic (acoustic) gas leak detectors are tested by means of artificial gas leaks simulated by means of
+				compressed nitrogen.
+				During the commissioning of traditional gas detection systems (IR point sensors or OpenPaths Detectors),
+				a calibration gas is injected directly into the sensor head to verify that the detector detects the gas correctly.
+				This test will ONLY verify if the gas detector measures the gas concentration correctly, BUT IT WILL NOT give any
+				indication that the gas detector will EVER detect a gas leak just a few metres away from the gas detector!
+				When a Gassonic ultrasonic (acoustic) gas leak detection system is commissioned, it is tested by means of REAL
+				gas leaks (Nitrogen) in distances up to 20 metres away from the detector. This will verify the leak detection performance
+				of each detector. Gassonic A/S has great experience in commissioning of ultrasonic gas leak detection systems, and the company
+				offers this as an on-site service to the customer.
+            </div>
+            <hr>                               
+     </td>
+     <td id="commisioningAndTesting2" style="20%;vertical-align: top;padding-top: 49px;padding-right: 10px;">
+         <img border="0"  src="${resource(dir: 'images/servicePage', file: 'Acommision.jpg')}"  alt="Pulpit rock" width="275" height="250">  
+     </td>
+     
+	<td id="marketing1" style="width:45%;vertical-align: top;">
+		<div style="text-align: center; font-size: 30px;">MARKETING</div><hr>
+		<div style="padding-left: 12px;padding-right: 12px;text-align:justify;font-weight:bold; font-style: italic;border-left: solid;border-right: solid;">
+                                        
+			We like to get to know our clients before they spend any money with us – 
+			and give them a chance to get to know us – so we offer a free initial consultation, 
+			complete with written report and recommendations, completely free and without obligation.
+		</div>
+		<div style="padding-left: 12px;padding-right: 12px;text-align:justify;font-weight:bold; font-style: italic;border-left: solid;border-right: solid;">
+                                        
+				If you’d like to talk to The Marketing Team about how we can help your business 
+				then you can reach out to us on  8860217730, or e-mail us at info@drawingservice.in
+										
+		</div>
+		<hr>                        
+	</td>
+	
+	<td id="marketing2" style="20%;vertical-align: top;padding-top: 49px;padding-right: 10px;">
+	    <img border="0"  src="${resource(dir: 'images/servicePage', file: 'Amarketing.jpg')}"  alt="Pulpit rock" width="275" height="250">  
+	</td>
+	
+     
+	<td id="designingDrawingFabrication1" style="width:45%;vertical-align: top;">
+	     <div style="text-align: center; font-size: 30px;">DESIGNING, DRAWING & FABRICATION</div><hr>
+	     <div style="padding-left: 12px;padding-right: 12px;text-align:justify;font-weight:bold; font-style: italic;border-left: solid;border-right: solid;">
+                                        
+                                 Machine design is the process of engineering design. A machine is made up of mechanisms 
+			that work together to satisfy the requirements of what the machine needs to accomplish.
+			Mechanisms can still be used independently, such as an umbrella, but cannot accomplish what
+			a machine can because a machine controls energy in addition to motion. Machine design takes
+			into account kinetics and kinematics, which deal with motion and the forces on an object in motion.
+			Machine design is applied through a specific process including determining what the machine needs
+			to do, benchmarking and defining goals and requirements, brainstorming, evaluating and selecting
+			from the different options, creating an in-depth design, creating and testing a prototype, and
+			finally manufacturing the machine.
+			
+			
+			Machine drawing may be defined as the representation of a machine component or machine by lines according
+			to certain set rules.
+			
+			
+			Fabrication machines make the basic shape of your custom part - cutting the necessary
+			holes, slots, and other shapes. You must specify a selection for each line in your drawing. 
+          </div>
+          <hr>                         
+	</td>
+	
+	<td id="designingDrawingFabrication2" style="20%;vertical-align: top;padding-top: 49px;padding-right: 10px;">
+	    <img border="0"  src="${resource(dir: 'images/servicePage', file: 'Adesigning.jpg')}"  alt="Pulpit rock" width="275" height="250">  
+	</td>
+     
+     
+     
 
 <td id="installation1" style="width:45%;vertical-align: top;">
 <div style="text-align: center; font-size: 30px;">
@@ -328,6 +421,12 @@ Our Service carefully examines your machine's measurement devices and recalibrat
 		$("#expertise2").hide();
 		$("#productivity1").hide();
 		$("#productivity2").hide();
+		$("#commisioningAndTesting1").hide();
+		$("#commisioningAndTesting2").hide();
+		$("#designingDrawingFabrication1").hide();
+		$("#designingDrawingFabrication2").hide();
+		$("#marketing1").hide();
+		$("#marketing2").hide();
 	}
 </script>
 <style media="screen" type="text/css">
