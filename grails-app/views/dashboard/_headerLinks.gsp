@@ -1,5 +1,9 @@
 <table width=100%" id="headertable">
-	<tr style="float:left"><td><div id="logo"><img src="${resource(dir: 'images/dashboard/', file: 'logo1.png')}" alt="some_text" width="230px" height="90px"></div></td></tr>
+	<tr style="float:left"><td>
+		<div id="logo">
+			<a href="${createLink(action:'index', controller:'dashboard')}"><img src="${resource(dir: 'images/dashboard/', file: 'logo1.png')}" alt="some_text" width="230px" height="90px"></a>
+		</div>
+	</td></tr>
 	<tr><td>
 	<div id="mainnav" class="headerClass">
         <ul>

@@ -50,8 +50,8 @@
                                         118/1, Gali Number - 2nd <br>
                                         2nd Floor, Govind Puri, Kalkaji, <br>
                                         Delhi -11009.<br>
-                                        Email - <a href="mailto:abc@liasionwork.com" target="_blank">abc@liasionwork.com</a><br>
-                                        Phone - +91-9876-542-565
+                                        Email - <a href="mailto:info@drawingservice.in" target="_blank">info@drawingservice.in</a><br>
+                                        Phone - +91-8860-217-730
 
                                     </td> 
                                 </tr>
