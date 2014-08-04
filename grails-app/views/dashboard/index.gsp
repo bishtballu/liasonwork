@@ -23,7 +23,7 @@
 						Logged in as <sec:username/> (<g:link controller='logout'>Logout</g:link>)
 					</sec:ifLoggedIn>
 				</div>
-    <article id="main" >
+    <article id="main" style="float:left;">
      <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"  width="900" height="350" id="tech" align="middle" quality="high" allowFullScreen="true" wmode="transparent" allowScriptAccess="always">
     <param name="movie" value="static/myalbum.swf?xml_path=static/slides.xml" />
     <param name="quality" value="high" />
