@@ -13,7 +13,7 @@
                 
 
                         <div id="form_container">
-<div id="logo"><img src="${resource(dir: 'images/dashboard/', file: 'logo.png')}" alt="some_text" width="200px" height="90px"></div>
+<div id="logo"><img src="${resource(dir: 'images/dashboard/', file: 'logo1.png')}" alt="some_text" width="230px" height="90px"></div>
                             <h1>Query A Product</h1>
                             <g:form id="enquiryForm" class="appnitro"  method="post" action="enquiryForm" url="[action:'submitEnquiry',controller:'dashboard']">
                                 <div class="form_description">

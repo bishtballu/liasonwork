@@ -27,6 +27,7 @@ function addColorToHeader()
 	else if(actionName=="contactus")	divId="contactus";
 	else if(actionName=="services")		divId="services"
 	else if(actionName=="product")	divId="product";
+	else if(actionName=="aboutus")	divId="aboutus"
 	else	divId="addproduct";
 	$("#"+divId).addClass('thispage');
 }

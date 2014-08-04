@@ -12,10 +12,10 @@
 <meta name="layout" content="dashboardlayout" />
 </head>
 
-<body >
+<body id="login" style="overflow-x: hidden;">
  
- <div id="wrapper">
-    <div id="top">
+  <div id="wrap" style="padding-left: 14%;text-align: center; width:  74%" class="contact">
+    <div id="main-body" class="box css" style="width: 100%;height: 134px;">
 		<g:render template="headerLinks"></g:render>
     </div>
     <div id="logoutLink">

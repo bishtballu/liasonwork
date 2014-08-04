@@ -1,5 +1,5 @@
 <table width=100%" id="headertable">
-	<tr style="float:left"><td><div id="logo"><img src="${resource(dir: 'images/dashboard/', file: 'logo.png')}" alt="some_text" width="200px" height="90px"></div></td></tr>
+	<tr style="float:left"><td><div id="logo"><img src="${resource(dir: 'images/dashboard/', file: 'logo1.png')}" alt="some_text" width="230px" height="90px"></div></td></tr>
 	<tr><td>
 	<div id="mainnav" class="headerClass">
         <ul>
@@ -11,6 +11,7 @@
 				<sec:ifNotLoggedIn>Login</sec:ifNotLoggedIn>
 			</a></li>
 			<li><a href="${createLink(action:'services', controller:'dashboard')}" id="services" >Services</a></li>
+			<li><a href="${createLink(action:'aboutus', controller:'dashboard')}" id="aboutus" >About Us</a></li>
         </ul>
     </div>
 	

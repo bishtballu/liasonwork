@@ -93,4 +93,8 @@ class DashboardController
 		else
 			redirect(action:'product')
 	}
+	
+	def aboutus(){
+		
+	}
 }
