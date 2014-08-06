@@ -11,13 +11,9 @@ import com.liason.product.ProductEnquiry
 @Secured("permitAll")
 class DashboardController
 {
-	def index(){
-		log.debug"params for index action : "+params
-	}
+	def index(){}
 	
-	def contactus(){
-		log.debug"params for contactus action : "+params
-	}
+	def contactus(){}
 	
 	def showSingleProduct(){
 		log.debug"params for showSingleProduct action : "+params
@@ -61,17 +57,11 @@ class DashboardController
 		[parentProductList:parentProductList, categoryList:categoryList, isEnquirySaved:isEnquirySaved]
 	}
 	
-	def register(){
-		log.debug"params for register action : "+params
-	}
+	def register(){}
 	
-	def signin(){
-		log.debug"params for signin action : "+params
-	}
+	def signin(){}
 	
-	def services(){
-		log.debug"params for signin action : "+params
-	}
+	def services(){}
 	
 	def enquiry(){
 		log.debug"params for enquiry action : "+params
@@ -100,12 +90,16 @@ class DashboardController
 	
 	def deleteProduct(){
 		log.debug"params for action deleteProduct : "+params
-		long productId=params.long(params.productId, 0)
+		long productId=params.long("productId", 0)
 		if(productId!=0)
 		{
 			Product product=Product.get(productId)
-			product.isDeleted=true
-			product.save()
+			if(product!=null)
+			{
+				product.isDeleted=true
+				product.save()
+				log.debug"product with id:${productId} deleted"
+			}
 		}
 		redirect (action:'product', controller:'dashboard')
 	}
