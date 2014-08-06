@@ -53,7 +53,7 @@ class DashboardController
 		ArrayList categoryList=ProductCategory.list()
 		ArrayList parentProductList=new ArrayList()
 		categoryList.each {
-			parentProductList.add( Product.findAllWhere(category:it) )
+			parentProductList.add( Product.findAllWhere(category:it, isDeleted:false) )
 		}
 		log.debug"parentProductList : "+parentProductList
 		String isEnquirySaved=session.getAttribute("isEnquirySaved")
@@ -96,5 +96,17 @@ class DashboardController
 	
 	def aboutus(){
 		
+	}
+	
+	def deleteProduct(){
+		log.debug"params for action deleteProduct : "+params
+		long productId=params.long(params.productId, 0)
+		if(productId!=0)
+		{
+			Product product=Product.get(productId)
+			product.isDeleted=true
+			product.save()
+		}
+		redirect (action:'product', controller:'dashboard')
 	}
 }

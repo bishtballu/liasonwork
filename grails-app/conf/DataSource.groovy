@@ -17,7 +17,7 @@ hibernate {
 environments {
     development {
         dataSource {
-            
+			logSql = true
         }
     }
     test {

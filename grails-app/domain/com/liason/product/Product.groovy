@@ -6,6 +6,7 @@ class Product
 	Image image
 	String description
 	ProductCategory category
+	boolean isDeleted
 	static hasMany = [productSpecTables:ProductSpecTable]
 
     static constraints = {

@@ -26,7 +26,7 @@
 
 
 
-                    <form class="" action="#" method="post" style="padding-top: 14px;">
+                    
                         <div class="step first-step alignCenter">
                             <table class="tablecontact">
                                 <tr>
@@ -71,7 +71,7 @@
 				      		</div>
                         </div>
 
-                    </form>
+                    
 
                 </div></div>
             <!-- FOOTER -->

@@ -25,5 +25,12 @@
           	</table>
           	
           </g:else>
-           
+          	<div>
+	          	<br><br>
+	           		<g:form method="post" name="deleteProduct" url="[action:'deleteProduct',controller:'dashboard']">
+	           			<input type="hidden" name="productId" value="${product.id}" />
+	           			<input type="submit" name="submit" value="Delete This Product" onclick="if( confirm('Are you sure you want to Delete this Product ?')==false) return false;" />
+	           		</g:form>
+	          	<br><br><br>
+          	</div>
           </div>
