@@ -31,15 +31,16 @@
                     <form class="" action="#" method="post">
                         <div class="step first-step alignCenter">
                             <table class="tablecontact">
-                                <tr >
-                                    <td  style="text-align: center;padding-top: 10px;">
-                                        <img alt="some text" src="${resource(dir: 'images/dashboard/', file: 'toplogo.jpg')}" /><br><br><br>
-                                    </td>
-                                </tr>
+                                
                                 <tr>
                                     <td  id="contactheader" >
                                         Contact Us
 
+                                    </td>
+                                </tr>
+                                <tr >
+                                    <td  style="text-align: center;padding-top: 10px;">
+                                        <img alt="some text" src="${resource(dir: 'images/dashboard/', file: 'toplogo.jpg')}" />
                                     </td>
                                 </tr>
                                 <tr>
@@ -142,13 +143,7 @@
 
             <div id="footer_spacer"></div>
 
-            <div id="bottom">
-                <ul>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li class="last"><a href="#">&copy; Liason Work</a></li>
-                </ul>
-            </div>
+            <g:render template="footerlinks"></g:render>
         </div>
         <!-- footer analytics go here -->
 

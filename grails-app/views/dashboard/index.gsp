@@ -145,7 +145,10 @@
 	</div>
 	
 	
-    
+    <div id="footer_spacer"></div>
+
+            <g:render template="footerlinks"></g:render>
+        </div>
     
 </div>
 </body>
