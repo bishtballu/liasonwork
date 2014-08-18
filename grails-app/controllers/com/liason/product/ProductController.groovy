@@ -61,4 +61,16 @@ class ProductController
 		log.debug"newUniqueName for uploaded image : "+newUniqueName
 		return newUniqueName
 	}
+
+	def addProductCategory(){
+		
+	}
+	
+	def addCategory(){
+		log.debug"params for action addCategory : "+params
+		ProductCategory category=new ProductCategory(name:params.categoryName)
+		if( !category.save() )
+			category.errors.each {log.debug"error occured while adding new product category : "+it}
+		redirect(action:'addProductCategory')
+	}
 }
