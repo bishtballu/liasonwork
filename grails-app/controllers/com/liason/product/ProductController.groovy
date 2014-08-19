@@ -63,14 +63,23 @@ class ProductController
 	}
 
 	def addProductCategory(){
-		
+		String addCategoryMsg=session.getAttribute("addCategoryMsg")
+		session.setAttribute("addCategoryMsg", null)
+		if(addCategoryMsg==null)
+			addCategoryMsg=""
+		[addCategoryMsg:addCategoryMsg]
 	}
 	
 	def addCategory(){
 		log.debug"params for action addCategory : "+params
 		ProductCategory category=new ProductCategory(name:params.categoryName)
 		if( !category.save() )
+		{
 			category.errors.each {log.debug"error occured while adding new product category : "+it}
+			session.setAttribute("addCategoryMsg", "${params.categoryName} category name already exists")
+		}
+		else
+			session.setAttribute("addCategoryMsg", "category saved successfully")
 		redirect(action:'addProductCategory')
 	}
 }

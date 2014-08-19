@@ -30,6 +30,9 @@
 			
             <div id="main-body" class="css" ><div class="inner">
                     <div class="step first-step alignCenter">
+                    <sec:ifLoggedIn>
+                    	<g:link url="[action:'addProductCategory',controller:'product']">Add Product Category</g:link>
+                    </sec:ifLoggedIn>
                     	<g:form name="addProductForm" url="[action:'saveNewProduct',controller:'product']"  enctype="multipart/form-data">
                         <table class="tablecontact">
                             <tr>
