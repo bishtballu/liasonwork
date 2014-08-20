@@ -80,6 +80,12 @@
 	</a>
 	</li>
 	
+	<li>
+	<a href="javascript:showTab('consultancy')">
+	<span class="ca-icon">CONSULTANCY</span>
+	</a>
+	</li>
+	
 </ul>
 </div><!-- content -->
 </div>
@@ -366,6 +372,59 @@ Our Service carefully examines your machine's measurement devices and recalibrat
 </td>
 
 
+
+
+
+<td id="consultancy1" style="width:45%;vertical-align: top;">
+<div style="text-align: middle; font-size: 30px;">Engineering & Consultancy</div><hr>
+                           <div style="padding-left: 12px;padding-right: 12px;text-align:justify;font-weight:bold; font-style: italic;border-left: solid;border-right: solid;">
+                               <span  style="text-align: center; font-size: 25px;"><b>Engineering</b></span>
+	<br><br>
+	Drawing Service Corporation has been providing engineering service to customers for many years, and across many industry sectors.
+
+	Our engineering services fall into four main groups, and you can find out more about them here.
+	<br><br>
+	Our engineering achievements include major complex and challenging projects related to machine tools. 
+	These are the world’s largest production platforms to be installed by float over, engineering to operate at 
+	critical situations.
+	<br><br>
+	Our engineering expertise extends from our consulting services through to our specialist engineering services and
+	decommissioning.
+
+	<br>
+	<br>
+	<br>
+	<br>
+	<span  style="text-align: center; font-size: 25px;"><b>Consultancy</b></span>
+	<br>
+	<span  style="text-align: left; font-size: 20px;"><b>Business consulting</b></span>
+	<br>
+	<br>
+	Our business consulting expertise is underpinned by Drawing service’s wider engineering and project management expertise,
+	including our front end, technology and other consultancy
+	services such as our environmental expertise
+	
+	
+	<br>
+	<br>
+	<span  style="text-align: left; font-size: 20px;"><b>Technical consultancy</b></span>
+	<br>
+	We deliver projects and solve problems across our sectors including mechanical industry,pressing, mining and oil and gas.
+	
+	
+                           </div>
+                           <hr>
+
+</td>
+<td id="consultancy2" style="20%;vertical-align: top;padding-top: 49px;padding-right: 10px;">
+<img border="0" src="${resource(dir: 'images/dashboard/', file: 'engineering.jpg')}" alt="Pulpit rock" width="275" height="250"> 
+</td>
+
+
+
+
+
+
 </tr>
 
 </table>
@@ -427,6 +486,8 @@ Our Service carefully examines your machine's measurement devices and recalibrat
 		$("#designingDrawingFabrication2").hide();
 		$("#marketing1").hide();
 		$("#marketing2").hide();
+		$("#consultancy1").hide();
+		$("#consultancy2").hide();
 	}
 </script>
 <style media="screen" type="text/css">
