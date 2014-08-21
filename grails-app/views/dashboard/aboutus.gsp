@@ -79,7 +79,7 @@
 				</div>
 				<br>
 				<div>
-				<img border="0"  src="${resource(dir: 'images/dashboard', file: 'aboutUsProfile.jpg')}"  alt="Pulpit rock" width="721" height="244">  
+				<img border="0"  src="${resource(dir: 'images/dashboard', file: 'aboutUsProfileNew.jpg')}"  alt="Pulpit rock" width="721" height="244">  
 				</div>
 				<br>
 				<div style="text-align:left;" >
@@ -103,7 +103,7 @@
 				  </div>
 				  <br>
 				  <div style="padding-left: 12px;padding-right: 12px;text-align:justify;font-weight:bold; font-style: italic;">
-				  All interested candidates can send their CV at hr@drawingservice.in
+				  All interested candidates can send their CV at  info@drawingservice.in
 				  </div>
 				  <br>
 

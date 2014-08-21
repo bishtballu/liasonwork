@@ -82,47 +82,7 @@
     </marquee>
 	<div style="width:100%;">
 	<table style="border:solid;width:100%;">
-	<td style="width:234px;height:175px;border: 1px solid;">
-		<div id="loginarea" style="background-image:url(images/indexPageMarque/login_bg.png);border: 1px solid;">
-              <table class="login" style="height:185px;font-family: Arial, Helvetica, sans-serif;font-size: 11px;">
-                <form id="form1" name="form1" method="post"></form>
-                  <tbody><tr>
-                    <td width="10"></td>
-                    <td colspan="2"><strong>Members Login</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:#F00">                      
-                      </strong></td>
-                  </tr>
-                  <tr>
-                    <td width="10"></td>
-                    <td> Name:</td>
-                    <td><input type="text" name="username" style="width:145px;"></td>
-                  </tr>
-                  <tr>
-                    <td width="10"></td>
-                    <td> Password:</td>
-                    <td><input type="password" name="password" style="width:145px;"></td>
-                  </tr>
-                  <tr>
-                    <td width="10"></td>
-                    <td colspan="3"><table width="100%" align="left">
-                        <tbody>
-						<tr>
-                          <td style="font-size:10px; left:-2;" align="left" class="login"><input type="checkbox" name="remember">
-                            Remember me</td>
-                          <td align="right"><input type="image" onclick="return validate()" value="submit" src="images/indexPageMarque/login_new.png"></td>
-                        </tr>
-                        <tr>
-                          <td style="font-size:10px" class="login">&nbsp;</td>
-                          <td style="font-size:10px" align="right" class="login">
-						  </td>
-                        </tr>
-                      </tbody></table></td>
-                  </tr>
-                
-              </tbody>
-			  </table>
-              
-            </div>
-	</td>
+	
 	<td style="border: 1px solid;">
 		<div style="font-family: Arial, Helvetica, sans-serif;font-size: 18px;color: #FFFFFF;height: 30;background-repeat: no-repeat;background-color: #730f0d;">About Drawing Service Corporation</div>
 		<div style="text-align:justify;font-size: 12px;font-family: Helvetica;padding:10px;">

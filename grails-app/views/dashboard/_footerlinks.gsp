@@ -1,7 +1,7 @@
 <div id="bottom">
-                <ul>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li class="last"><a href="#">&copy; Liason Work</a></li>
-                </ul>
-            </div>
+	<br/>
+	<ul>
+		<li class="last"><a href="#">&copy; Copyright Drawing Service Corporation 2014. All rights reserved</a></li>
+	</ul>
+	<br/>
+</div>

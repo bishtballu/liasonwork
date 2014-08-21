@@ -50,8 +50,11 @@
                                         Drawining Service Corporation & Liasion Work,<br>
                                         118/1, Gali Number - 2nd <br>
                                         2nd Floor, Govind Puri, Kalkaji, <br>
-                                        Delhi -11009.<br>
-                                        Email - <a href="mailto:info@drawingservice.in" target="_blank">info@drawingservice.in</a><br>
+                                        Delhi -110019.<br>
+                                        Email - <a href="mailto:info@drawingservice.in" target="_blank">info@drawingservice.in</a> , 
+                                        <a href="mailto:ceo@drawingservice.in" target="_blank">ceo@drawingservice.in</a> , 
+                                        <a href="mailto:sales@drawingservice.in" target="_blank">sales@drawingservice.in</a>
+                                        <br>
                                         Phone - +91-8860-217-730
 
                                     </td> 
